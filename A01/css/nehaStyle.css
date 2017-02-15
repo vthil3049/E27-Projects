@@ -26,6 +26,12 @@ a {
 .text-center {
 	text-align: center;
 }
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
 
 .text-info {
 	color: MediumSpringGreen;  /* a brighter green */
@@ -80,6 +86,13 @@ header img {
 	margin: 10px 0 10px 40px;
 
 }
+main img {
+	float: left;
+	margin-right: 1.875em;
+	width: auto;
+	max-width: 100%;
+}
+
 .floatleft {
 	float: left;
 	margin: 0 1em 1em 0;
@@ -164,9 +177,9 @@ blockquote {
 }
 blockquote::after {
 	  content: "";
-	  background: url(http://nehaparikhdance.com/images/NehaMohiniAttam_03_WM.jpg); 
+	  background: url(../img/ghungroo.JPG); 
 	  /*background-color: maroon; */
-	  opacity: 0.2;
+	  opacity: 0.3;
 	  top: 0;
 	  left: 0;
 	  bottom: 0;
@@ -184,33 +197,14 @@ blockquote cite {
 	font-size: 0.85em;
 }
 footer {
-	background-color: navy;
+	background-color: #0a1f6b;
 	color:cornsilk;
 	text-align: center;
 	padding: 1em 5em;
-	border-top: 50px solid red;
-
-		background: rgba(0,0,128,1);
-background: -moz-linear-gradient(left, rgba(0,0,128,1) 0%, rgba(32,124,229,1) 50%, rgba(0,0,128,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,128,1)), color-stop(50%, rgba(32,124,229,1)), color-stop(100%, rgba(0,0,128,1)));
-background: -webkit-linear-gradient(left, rgba(0,0,128,1) 0%, rgba(32,124,229,1) 50%, rgba(0,0,128,1) 100%);
-background: -o-linear-gradient(left, rgba(0,0,128,1) 0%, rgba(32,124,229,1) 50%, rgba(0,0,128,1) 100%);
-background: -ms-linear-gradient(left, rgba(0,0,128,1) 0%, rgba(32,124,229,1) 50%, rgba(0,0,128,1) 100%);
-background: linear-gradient(to right, rgba(0,0,128,1) 0%, rgba(32,124,229,1) 50%, rgba(0,0,128,1) 100%);
+	border-top: 5px solid maroon;
+	
 }
 
-footer{
-	border-top: 10px solid red;
-	border-image: url(Diwali_odisha_rangoli.jpg);
-}
-
-/*#borderimg1 {
-    border: 10px solid red;
-    padding: 15px;
-    -webkit-border-image: url(border.png) 30 round;  Safari 3.1-5 
-    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
-   /* border-image: url(border.png) 30 round;
-}*/
 .textcenter {
 	text-align: center;
 }
