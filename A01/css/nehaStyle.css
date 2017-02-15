@@ -1,3 +1,4 @@
+/* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
 html {
   box-sizing: border-box;
 }
@@ -6,8 +7,9 @@ html {
 } 
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: cornsilk;
+	font-family: Georgia, Times New Roman, serif;
+	color: cornsilk;
+	background-color: #000520;
 	padding: 0;
 	margin: 0;
 }
@@ -16,12 +18,25 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Droid Serif', serif;
 }
 
+a {
+	color:cyan;
+}
+
+/* trying to recreate some bootstrap like typography */
+.text-center {
+	text-align: center;
+}
+
+.text-info {
+	color: MediumSpringGreen;  /* a brighter green */
+}
+
 .wrapper {
-	/* border: 2px solid orange; */
-	width: 90%;
-	padding: 20px 0;
-	overflow: auto;
-	margin: 0.1em auto;
+	border: 2px solid orange; 
+	width: 95%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;	
 }
 .banner {
 		overflow: auto;
@@ -41,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 	color:yellow;
 }
 header {
-	background-color: navy;
+	background-color: #0a1f6b;
 	color: cornsilk;
 	width: 100%;
 	overflow: auto;
@@ -79,10 +94,7 @@ header img {
 	clear: both;
 }
 /* floats: you can combine with other styles, shown here for clarity */
-aside {
-	width: 25%;
-	padding-top: 150px;
-}
+
 aside h2 {
 	text-align: center;
 }
@@ -97,7 +109,7 @@ article {
 }
 
 header h1 {
-	width: 30%;
+	/*width: 30%; */
 	float: left;
 }
 nav {
@@ -105,7 +117,7 @@ nav {
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-top: 1.5em; 
-	background-color: green;
+	background-color:#003a04;
 }
 nav ul {
 	padding: 0;
@@ -203,29 +215,46 @@ footer{
 	text-align: center;
 }
 
-table {
-	border: 2px solid;
+/* my grid system */
+.row {
+	
+
+}
+.row::after {
+	content:"";
+	display: table;
+	clear: both;
+}
+[class*='col-']{
+	float: left;
+	margin-left: 2%;
+	min-height: 1px;
+	position: relative;
 }
 
-th, td {
-	border: 1px solid;
-}
-thead th {
-	background-color: burlywood;
-	font-size: 110%;
-	padding: 1em;
-}
-td {
-overflow: auto;
-	padding:5px;
+.col-1 {
+	width: 14.3%;
 }
 
-td a img {
-	margin: auto;
+.col-2 {
+	width: 30.6%;
 }
 
+.col-3 {
+	width: 47%;
+}
 
+.col-4 {
+	width: 63.2%;
+}
 
+.col-5 {
+	width: 81.5%;
+}
+
+.col-6 {
+	width: 96%;
+}
 
 
 
