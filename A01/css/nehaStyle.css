@@ -86,11 +86,14 @@ header img {
 	margin: 10px 0 10px 40px;
 
 }
-main img {
+main img, section img {
 	float: left;
 	margin-right: 1.875em;
 	width: auto;
 	max-width: 100%;
+}
+section img {
+clear: right;
 }
 
 .floatleft {
@@ -155,21 +158,12 @@ nav a:hover {
 .selected {
 	border-top: 2px solid cornsilk;
 }
-/*section :first-child::first-letter {
-	font-weight: bold;
-	font-size: 3em;
-	float: left;
-}*/
+
 section {
 
 	overflow: auto;
 }
-section p:first-of-type::first-letter {
-	font-family: 'Droid Serif', serif;	
-	font-weight: bold;
-	font-size: 3em;
-	/*float: left;*/
-}
+
 blockquote {
 	padding: 1em;
 	margin-left: 0;
