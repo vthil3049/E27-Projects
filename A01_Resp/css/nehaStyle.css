@@ -48,7 +48,7 @@ a {
 		overflow: auto;
 }
 .banner h1 {
-	font-size: 2em;
+	font-size: 1em;
 	float:left;
 }
 .social {
@@ -76,7 +76,6 @@ header h1 {
 	margin: 1em 0 0 1.5em;
 	padding: 0em 0 0 1em; 
 	display:inline-block;
-
 	/*border: 1px solid white; */
 }
 header img {
@@ -126,15 +125,7 @@ aside img {
 aside h2 {
 	text-align: center;
 }
-figcaption {
-	text-align:center;
-}
-article {
-	width: 70%;
-	padding: 150px 5px 5px 5px;
-	/* border: 2px solid orange; */
-		overflow: auto;
-}
+
 
 header h1 {
 	/*width: 30%; */
@@ -142,7 +133,7 @@ header h1 {
 }
 nav {
 	font-family: 'Droid Serif', serif;
-	font-size: 1.2em;
+	font-size: 0.8em;
 	font-weight: bold;
 	padding-top: 1.5em; 
 	background-color:#003a04;
@@ -249,31 +240,78 @@ tr:nth-child(even) {
 	position: relative;
 }
 
-.col-1 {
-	width: 14.3%;
-}
-
-.col-2 {
-	width: 30.6%;
-}
-
-.col-3 {
-	width: 47%;
-}
-
-.col-4 {
-	width: 63.2%;
-}
-
-.col-5 {
-	width: 81.5%;
-}
-
-.col-6 {
+/* mobile first approach - columns are all 96% wide */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-2-6 {
 	width: 96%;
 }
 
+.hide-m {
+	display: none;
+}
 
+@media only screen and (min-width:480px) and (max-width: 767px)
+{
+
+	.col-3, .col-4, .col-5, .col-6, .col-2-6 {
+		width: 96%;
+	}
+	.col-1, .col-2 {
+		width: 47%;
+	}
+	.hide-m {
+		display: block;
+	}
+
+	.banner h1 {
+	font-size: 1.5em;
+	float:left;
+	}
+
+	nav {
+		font-size: 1em;
+	}
+}
+
+/*anything bigger than a tablet is assumed to be desktop and above */
+@media only screen and (min-width:768px)
+{
+
+	.col-1 {
+		width: 14.3%;
+	}
+
+	.col-2, .col-2-6 {
+		width: 30.6%;
+	}
+
+	.col-3 {
+		width: 47%;
+	}
+
+	.col-4 {
+		width: 63.2%;
+	}
+
+	.col-5 {
+		width: 81.5%;
+	}
+
+	.col-6 {
+		width: 96%;
+	}
+
+		.hide-m {
+		display: block;
+	}
+
+		.banner h1 {
+	font-size: 2em;
+	float:left;
+	}
+	nav {
+		font-size: 1.2em;
+	}
+}
 
 
 
