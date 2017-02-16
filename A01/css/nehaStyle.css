@@ -86,14 +86,26 @@ header img {
 	margin: 10px 0 10px 40px;
 
 }
+section {
+	overflow: auto;
+}
 main img, section img {
+	display: block;
 	float: left;
+	clear: both;
 	margin-right: 1.875em;
 	width: auto;
 	max-width: 100%;
+	
 }
 section img {
-clear: right;
+clear: both;
+}
+
+.img-center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .floatleft {
