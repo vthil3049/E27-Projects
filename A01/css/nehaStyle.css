@@ -86,20 +86,20 @@ header img {
 	margin: 10px 0 10px 40px;
 
 }
-section {
+section, aside {
 	overflow: auto;
 }
-main img, section img {
+main img, section img, aside img {
 	display: block;
 	float: left;
-	clear: both;
+
 	margin-right: 1.875em;
 	width: auto;
 	max-width: 100%;
 	
 }
-section img {
-clear: both;
+aside img {
+
 }
 
 .img-center {
@@ -183,7 +183,7 @@ blockquote {
 }
 blockquote::after {
 	  content: "";
-	  background: url(../img/ghungroo.JPG); 
+	  background: url(../img/ghungroo.jpg); 
 	  /*background-color: maroon; */
 	  opacity: 0.3;
 	  top: 0;
@@ -210,11 +210,28 @@ footer {
 	border-top: 5px solid maroon;
 	
 }
+footer::after {
+	content:"All images copyrights www.nehaparikhdance.com";
 
+}
 .textcenter {
 	text-align: center;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid orange;
+    text-align: center;
+    padding: 0.2em;
+}
+
+tr:nth-child(even) {
+    background-color: #003a04;
+}
 /* my grid system */
 .row {
 	
