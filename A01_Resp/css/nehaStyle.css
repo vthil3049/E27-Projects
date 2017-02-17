@@ -4,7 +4,7 @@ html {
 }
 *, *:before, *:after {
 	box-sizing: inherit;
-} 
+}
 
 body {
 	font-family: Georgia, Times New Roman, serif;
@@ -38,11 +38,11 @@ a {
 }
 
 .wrapper {
-	border: 2px solid orange; 
+	border: 2px solid orange;
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
-	float: none;	
+	float: none;
 }
 .banner {
 	overflow: auto;
@@ -74,7 +74,7 @@ header {
 
 header h1 {
 	margin: 1em 0 0 1.5em;
-	padding: 0em 0 0 1em; 
+	padding: 0em 0 0 1em;
 	display:inline-block;
 	/*border: 1px solid white; */
 }
@@ -95,7 +95,7 @@ main img, section img, aside img {
 	margin-right: 1.875em;
 	width: auto;
 	max-width: 100%;
-	
+
 }
 aside img {
 
@@ -135,7 +135,7 @@ nav {
 	font-family: 'Droid Serif', serif;
 	font-size: 0.8em;
 	font-weight: bold;
-	padding-top: 1.5em; 
+	padding-top: 1.5em;
 	background-color:#003a04;
 }
 nav ul {
@@ -174,7 +174,9 @@ blockquote {
 }
 blockquote::after {
 	content: "";
-	background: url(../img/ghungroo_small.jpg); 
+	/* default is mobile - so background image is small */
+	background: url(../img/ghungroo_small.jpg);
+
 	/*background-color: maroon; */
 	opacity: 0.3;
 	top: 0;
@@ -182,7 +184,7 @@ blockquote::after {
 	bottom: 0;
 	right: 0;
 	position: absolute;
-	z-index: -1;   
+	z-index: -1;
 	/*border-radius: 10px; */
 
 }
@@ -199,7 +201,7 @@ footer {
 	text-align: center;
 	padding: 1em 5em;
 	border-top: 5px solid maroon;
-	
+
 }
 footer::after {
 	content:"All images copyrights www.nehaparikhdance.com";
@@ -225,7 +227,7 @@ tr:nth-child(even) {
 }
 /* my grid system */
 .row {
-	
+
 
 }
 .row::after {
@@ -250,7 +252,7 @@ tr:nth-child(even) {
 }
 
 @media only screen and (min-width:480px) and (max-width: 767px)
-{
+{ /* tablet */
 
 	/* columns 3 & above become full width */
 	.col-3, .col-4, .col-5, .col-6, .col-2-6 {
@@ -274,7 +276,7 @@ tr:nth-child(even) {
 
 	blockquote::after {
 		content: "";
-		background: url(../img/ghungroo_small.jpg); 
+		background: url(../img/ghungroo_small.jpg);
 	}
 }
 
@@ -325,7 +327,7 @@ tr:nth-child(even) {
 
 		blockquote::after {
 		content: "";
-		background: url(../img/ghungroo_big.jpg); 
+		background: url(../img/ghungroo_big.jpg); /* background image for desktop */
 	}
 }
 
