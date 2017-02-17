@@ -1,9 +1,9 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 } 
 
 body {
@@ -45,7 +45,7 @@ a {
 	float: none;	
 }
 .banner {
-		overflow: auto;
+	overflow: auto;
 }
 .banner h1 {
 	font-size: 1em;
@@ -67,9 +67,9 @@ header {
 	width: 100%;
 	overflow: auto;
 	/* position: fixed; */
-border: 3px solid maroon;
+	border: 3px solid maroon;
 
-/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#000080', GradientType=1 ); */
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#000080', GradientType=1 ); */
 }
 
 header h1 {
@@ -173,17 +173,17 @@ blockquote {
 	position: relative;
 }
 blockquote::after {
-	  content: "";
-	  background: url(../img/ghungroo.jpg); 
-	  /*background-color: maroon; */
-	  opacity: 0.3;
-	  top: 0;
-	  left: 0;
-	  bottom: 0;
-	  right: 0;
-	  position: absolute;
-	  z-index: -1;   
-	  /*border-radius: 10px; */
+	content: "";
+	background: url(../img/ghungroo_small.jpg); 
+	/*background-color: maroon; */
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+	/*border-radius: 10px; */
 
 }
 blockquote p {
@@ -210,18 +210,18 @@ footer::after {
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 td, th {
-    border: 1px solid orange;
-    text-align: center;
-    padding: 0.2em;
+	border: 1px solid orange;
+	text-align: center;
+	padding: 0.2em;
 }
 
 tr:nth-child(even) {
-    background-color: #003a04;
+	background-color: #003a04;
 }
 /* my grid system */
 .row {
@@ -240,7 +240,7 @@ tr:nth-child(even) {
 	position: relative;
 }
 
-/* mobile first approach - columns are all 96% wide */
+/* mobile first approach - columns are all together 96% wide */
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-2-6 {
 	width: 96%;
 }
@@ -252,6 +252,7 @@ tr:nth-child(even) {
 @media only screen and (min-width:480px) and (max-width: 767px)
 {
 
+	/* columns 3 & above become full width */
 	.col-3, .col-4, .col-5, .col-6, .col-2-6 {
 		width: 96%;
 	}
@@ -263,12 +264,25 @@ tr:nth-child(even) {
 	}
 
 	.banner h1 {
-	font-size: 1.5em;
-	float:left;
+		font-size: 1.2em;
+		float:left;
 	}
 
 	nav {
 		font-size: 1em;
+	}
+
+	blockquote::after {
+		content: "";
+		background: url(../img/ghungroo_small.jpg); 
+	}
+}
+
+@media only screen and (min-width:768px) and (max-width: 1013px) {
+
+	.banner h1 {
+		font-size: 1.5em;
+		float:left;
 	}
 }
 
@@ -300,19 +314,28 @@ tr:nth-child(even) {
 		width: 96%;
 	}
 
-		.hide-m {
+	.hide-m {
 		display: block;
 	}
 
-		.banner h1 {
-	font-size: 2em;
-	float:left;
-	}
+
 	nav {
 		font-size: 1.2em;
 	}
+
+		blockquote::after {
+		content: "";
+		background: url(../img/ghungroo_big.jpg); 
+	}
 }
 
+@media only screen and (min-width: 1014px)
+{
+	.banner h1 {
+		font-size: 2em;
+		float:left;
+	}
+}
 
 
 
