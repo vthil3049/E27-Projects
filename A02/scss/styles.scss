@@ -1,4 +1,10 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
+$header-background: #0a1f6b;
+$body-background: darken($header-background, 15%);
+$fontcolor: cornsilk;
+$body-font: 'Georgia', 'Times New Roman', serif;
+$header-font: 'Droid Serif', serif;
+
 html {
 	box-sizing: border-box;
 }
@@ -7,15 +13,16 @@ html {
 }
 
 body {
-	font-family: 'Georgia', 'Times New Roman', serif;
-	color: cornsilk;
-	background-color: #000520;
+	font-family: $body-font;
+	color: $fontcolor;
+	/* background-color: #000520; */
+	background-color: $body-background;
 	padding: 0;
 	margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Droid Serif', serif;
+	font-family: $header-font;
 }
 
 a {
@@ -56,14 +63,14 @@ a {
 	margin-right: 2em;
 }
 .social a{
-	color:cornsilk;
+	color:$fontcolor;
 }
 .social a:hover{
 	color:yellow;
 }
 header {
-	background-color: #0a1f6b;
-	color: cornsilk;
+	background-color: $header-background;
+	color: $fontcolor;
 	width: 100%;
 	overflow: auto;
 	/* position: fixed; */
@@ -132,7 +139,7 @@ header h1 {
 	float: left;
 }
 nav {
-	font-family: 'Droid Serif', serif;
+	font-family: $header-font;
 	font-size: 0.8em;
 	font-weight: bold;
 	padding-top: 1.5em;
@@ -151,7 +158,7 @@ nav li {
 nav a {
 	display: inline-block;
 	text-decoration: none;
-	color: cornsilk;
+	color: $fontcolor;
 	padding: 0.2em 0.6em;
 }
 nav a:hover {
@@ -159,7 +166,7 @@ nav a:hover {
 	background-color: maroon;
 }
 .selected {
-	border-top: 2px solid cornsilk;
+	border-top: 2px solid $fontcolor;
 }
 
 section {
@@ -192,12 +199,12 @@ blockquote p {
 	font-weight: bold;
 }
 blockquote cite {
-	font-family: 'Georgia', serif;
+	font-family: $body-font;
 	font-size: 0.85em;
 }
 footer {
-	background-color: #0a1f6b;
-	color:cornsilk;
+	background-color: $header-background;
+	color:$fontcolor;
 	text-align: center;
 	padding: 1em 5em;
 	border-top: 5px solid maroon;
@@ -354,5 +361,3 @@ tr:nth-child(even) {
 	height: 100%;
 	border: 1px solid silver;
 }
-
-
