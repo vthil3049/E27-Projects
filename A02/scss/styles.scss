@@ -1,9 +1,37 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
 $header-background: #0a1f6b;
 $body-background: darken($header-background, 15%);
+$nav-background: #003a04;
+
 $fontcolor: cornsilk;
 $body-font: 'Georgia', 'Times New Roman', serif;
 $header-font: 'Droid Serif', serif;
+$border-std: 2px solid maroon;
+
+$onecol : 14.3%;
+$gutter: 2%;
+$base-font-size: 16px;
+
+
+@function pxtoem ($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+
+
+@function oneless($numval)
+{
+	@return ($numval - 1);
+}
+/* custom function to calculate %width based on number of columns */
+@function colwidth($numcols)
+{
+
+	@return ($numcols*$onecol+ oneless($numcols)*$gutter);
+}
+
+
+
 
 html {
 	box-sizing: border-box;
@@ -45,7 +73,7 @@ a {
 }
 
 .wrapper {
-	border: 2px solid orange;
+	border: $border-std;
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -74,7 +102,7 @@ header {
 	width: 100%;
 	overflow: auto;
 	/* position: fixed; */
-	border: 3px solid maroon;
+	border: $border-std;
 
 	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#000080', GradientType=1 ); */
 }
@@ -102,9 +130,6 @@ main img, section img, aside img {
 	margin-right: 1.875em;
 	width: auto;
 	max-width: 100%;
-
-}
-aside img {
 
 }
 
@@ -142,31 +167,37 @@ nav {
 	font-family: $header-font;
 	font-size: 0.8em;
 	font-weight: bold;
-	padding-top: 1.5em;
-	background-color:#003a04;
+	padding: 0.1em 0;
+	background-color:$nav-background;
 }
 nav ul {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	text-align: left;
+	text-align: center;
 }
 nav li {
 	display: inline;
 	padding-right: 0.5em;
+
 }
 nav a {
 	display: inline-block;
 	text-decoration: none;
 	color: $fontcolor;
 	padding: 0.2em 0.6em;
+		width:30%;
+		margin: 0 auto;
 }
 nav a:hover {
 	color: #ffc;
 	background-color: maroon;
 }
 .selected {
-	border-top: 2px solid $fontcolor;
+	/* border-top: 2px solid $fontcolor; */
+	background-color: $header-background;
+	text-align: center;
+	padding: 0.2em 0;
 }
 
 section {
@@ -230,7 +261,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-	background-color: #003a04;
+	background-color: $nav-background;
 }
 /* my grid system */
 .row {
@@ -251,7 +282,7 @@ tr:nth-child(even) {
 
 /* mobile first approach - columns are all together 96% wide */
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-2-6 {
-	width: 96%;
+	width: colwidth(6); /*  96%;  */
 }
 
 .hide-m {
@@ -263,10 +294,10 @@ tr:nth-child(even) {
 
 	/* columns 3 & above become full width */
 	.col-3, .col-4, .col-5, .col-6, .col-2-6 {
-		width: 96%;
+		width: colwidth(6); /* 96%;  */
 	}
 	.col-1, .col-2 {
-		width: 47%;
+		width: colwidth(3);  /*  47%;  */
 	}
 	.hide-m {
 		display: block;
@@ -295,32 +326,34 @@ tr:nth-child(even) {
 	}
 }
 
+
 /*anything bigger than a tablet is assumed to be desktop and above */
 @media only screen and (min-width:768px)
 {
 
+
 	.col-1 {
-		width: 14.3%;
+		width: colwidth(1);  /*  14.3%;  */
 	}
 
 	.col-2, .col-2-6 {
-		width: 30.6%;
+		width: colwidth(2); /*30.6%; */
 	}
 
 	.col-3 {
-		width: 47%;
+		width: colwidth(3); /* 47%; */
 	}
 
 	.col-4 {
-		width: 63.2%;
+		width: colwidth(4); /* 63.2%; */
 	}
 
 	.col-5 {
-		width: 81.5%;
+		width: colwidth(5); /* 79.5%; */
 	}
 
 	.col-6 {
-		width: 96%;
+		width: colwidth(6); /* 96%; */
 	}
 
 	.hide-m {
