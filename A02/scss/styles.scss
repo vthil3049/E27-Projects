@@ -1,7 +1,7 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
 /* variables */
 $header-background: #0a1f6b;
-/* use of a sass function below */
+/* use of a sass builting function below */
 $body-background: darken($header-background, 15%);
 $nav-background: #003a04;
 
@@ -10,8 +10,8 @@ $body-font: 'Georgia', 'Times New Roman', serif;
 $header-font: 'Droid Serif', serif;
 $border-std: 2px solid maroon;
 
-$onecol : 14.3%;
-$gutter: 2%;
+$onecol : 14.3%;  /* default width of 1/6 column on a desktop for a 6 col grid */
+$gutter: 2%;   /* space between cols */
 $base-font-size: 16px;
 
 
@@ -24,11 +24,12 @@ $base-font-size: 16px;
 {
 	@return ($numval - 1);
 }
-/* custom function to calculate %width based on number of columns */
+/* custom function to calculate %width based on number of columns for the grid system*/
 @function colwidth($numcols)
 {
 	@return ($numcols*$onecol+ oneless($numcols)*$gutter);
 }
+
 
 @mixin std-coloring
 {
@@ -41,6 +42,26 @@ $base-font-size: 16px;
 		content: "";
 		background: url($url);
 	}
+}
+
+@mixin banner-h-size($size){
+	.banner h1 {
+		font-size: $size;
+		float:left;
+	}
+}
+
+/* mixin with if then else and a default of left align */
+@mixin textalign($align:left) {
+  @if $align == right {
+    text-align: right;
+  }
+  @else if $align == left {
+    text-align: left;
+  }
+  @else if $align== center{
+    text-align: center;
+  }
 }
 
 html {
@@ -69,13 +90,16 @@ a {
 
 /* trying to recreate some bootstrap like typography */
 .text-center {
-	text-align: center;
+	@include textalign(center);
+	/* text-align: center; */
 }
 .text-right {
-	text-align: right;
+		@include textalign(right);
+	/* text-align: right; */
 }
 .text-left {
-	text-align: left;
+	@include textalign();
+	/* text-align: left; */
 }
 
 .text-info {
@@ -89,14 +113,14 @@ a {
 	margin: 0 auto;
 	float: none;
 }
+
+@include banner-h-size(0.7em);   /* header font size on mobile */
+
 .banner {
 	overflow: auto;
-	h1 {
-		font-size: 1em;
-		float:left;
-	}
 }
 
+/* multiple levels of nesting */
 .social {
 	float:right;
 	margin-right: 2em;
@@ -108,16 +132,11 @@ a {
 	}
 }
 
-
+/* nesting */
 header {
 	@include std-coloring;
-
-	/*
-	background-color: $header-background;
-	color: $fontcolor; */
 	width: 100%;
 	overflow: auto;
-	/* position: fixed; */
 	border: $border-std;
 	h1 {
 		margin: 1em 0 0 1.5em;
@@ -172,6 +191,7 @@ aside h2 {
 	text-align: center;
 }
 
+/* nesting multi level */
 nav {
 	font-family: $header-font;
 	font-size: 0.8em;
@@ -210,7 +230,7 @@ nav {
 .selected {
 	/* border-top: 2px solid $fontcolor; */
 	@include std-coloring;
-	/* use of a sass function */
+	/* use of a  built-in sass function */
 	background-color: complement($header-background); 
 	text-align: center;
 	padding: 0.2em 0;
@@ -227,8 +247,6 @@ blockquote {
 	margin-left: 0;
 	position: relative;
 	&::after {
-		/* content: "";
-		background: url(../img/ghungroo_small.jpg); */
 		opacity: 0.3;
 		top: 0;
 		left: 0;
@@ -241,7 +259,11 @@ blockquote {
 		font-weight: bold;
 	}
 	cite {
-		font-family: $body-font;
+/* extend */
+		@extend body;
+
+		/*font-family: $body-font;
+		color: $fontcolor; */
 		font-size: 0.85em;
 	}
 
@@ -251,10 +273,8 @@ $imgsize: "../img/ghungroo_small.jpg";
 @include blockquote-bkgnd($imgsize);
 
 footer {
-	/*
-	background-color: $header-background;
-	color:$fontcolor; */
-	@include std-coloring;
+
+	@extend header;
 
 	text-align: center;
 	padding: 1em 5em;
@@ -263,10 +283,6 @@ footer {
 		content:"All images copyrights www.nehaparikhdance.com";
 
 	}
-}
-
-.textcenter {
-	text-align: center;
 }
 
 table {
@@ -319,11 +335,7 @@ tr:nth-child(even) {
 	.hide-m {
 		display: block;
 	}
-
-	.banner h1 {
-		font-size: 1.2em;
-		float:left;
-	}
+	@include banner-h-size(1.2em);
 
 	nav {
 		font-size: 1em;
@@ -338,11 +350,8 @@ tr:nth-child(even) {
 	}
 
 	@media only screen and (min-width:768px) and (max-width: 1013px) {
+		@include banner-h-size(1.5em);
 
-		.banner h1 {
-			font-size: 1.5em;
-			float:left;
-		}
 	}
 
 
@@ -394,10 +403,8 @@ tr:nth-child(even) {
 
 	@media only screen and (min-width: 1014px)
 	{
-		.banner h1 {
-			font-size: 2em;
-			float:left;
-		}
+		@include banner-h-size(2em);
+
 	}
 
 	/* fluid video test - obtained from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */

@@ -1,0 +1,14 @@
+/* variables */
+$header-background: #0a1f6b;
+/* use of a sass builting function below */
+$body-background: darken($header-background, 15%);
+$nav-background: #003a04;
+
+$fontcolor: cornsilk;
+$body-font: 'Georgia', 'Times New Roman', serif;
+$header-font: 'Droid Serif', serif;
+$border-std: 2px solid maroon;
+
+$onecol : 14.3%;  /* default width of 1/6 column on a desktop for a 6 col grid */
+$gutter: 2%;   /* space between cols */
+$base-font-size: 16px;
