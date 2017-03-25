@@ -1,5 +1,7 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
+/* variables */
 $header-background: #0a1f6b;
+/* use of a sass function below */
 $body-background: darken($header-background, 15%);
 $nav-background: #003a04;
 
@@ -13,11 +15,10 @@ $gutter: 2%;
 $base-font-size: 16px;
 
 
+/* custom functions */
 @function pxtoem ($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
+	@return ($px / $base) * 1em;
 }
-
-
 
 @function oneless($numval)
 {
@@ -26,12 +27,21 @@ $base-font-size: 16px;
 /* custom function to calculate %width based on number of columns */
 @function colwidth($numcols)
 {
-
 	@return ($numcols*$onecol+ oneless($numcols)*$gutter);
 }
 
+@mixin std-coloring
+{
+	background-color: $header-background;
+	color: $fontcolor;
+}
 
-
+@mixin blockquote-bkgnd($url){
+	blockquote::after {
+		content: "";
+		background: url($url);
+	}
+}
 
 html {
 	box-sizing: border-box;
@@ -81,52 +91,56 @@ a {
 }
 .banner {
 	overflow: auto;
+	h1 {
+		font-size: 1em;
+		float:left;
+	}
 }
-.banner h1 {
-	font-size: 1em;
-	float:left;
-}
+
 .social {
 	float:right;
 	margin-right: 2em;
+	a {
+		color:$fontcolor;
+		&:hover {
+			color:yellow;
+		}
+	}
 }
-.social a{
-	color:$fontcolor;
-}
-.social a:hover{
-	color:yellow;
-}
+
+
 header {
+	@include std-coloring;
+
+	/*
 	background-color: $header-background;
-	color: $fontcolor;
+	color: $fontcolor; */
 	width: 100%;
 	overflow: auto;
 	/* position: fixed; */
 	border: $border-std;
+	h1 {
+		margin: 1em 0 0 1.5em;
+		padding: 0em 0 0 1em;
+		display:inline-block;
+		float: left;
+	}
 
-	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#000080', GradientType=1 ); */
+	img {
+		float:left;
+		border: 2px solid red;
+		border-radius: 100px;
+		margin: 10px 0 10px 40px;
+	}
 }
 
-header h1 {
-	margin: 1em 0 0 1.5em;
-	padding: 0em 0 0 1em;
-	display:inline-block;
-	/*border: 1px solid white; */
-}
-header img {
-	float:left;
-	border: 2px solid red;
-	border-radius: 100px;
-	margin: 10px 0 10px 40px;
 
-}
 section, aside {
 	overflow: auto;
 }
 main img, section img, aside img {
 	display: block;
 	float: left;
-
 	margin-right: 1.875em;
 	width: auto;
 	max-width: 100%;
@@ -158,46 +172,49 @@ aside h2 {
 	text-align: center;
 }
 
-
-header h1 {
-	/*width: 30%; */
-	float: left;
-}
 nav {
 	font-family: $header-font;
 	font-size: 0.8em;
 	font-weight: bold;
 	padding: 0.1em 0;
 	background-color:$nav-background;
-}
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	text-align: center;
-}
-nav li {
-	display: inline;
-	padding-right: 0.5em;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		text-align: center;
+	}
+	li {
+		display: inline;
+		padding-right: 0.5em;
 
-}
-nav a {
-	display: inline-block;
-	text-decoration: none;
-	color: $fontcolor;
-	padding: 0.2em 0.6em;
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		color: $fontcolor;
+		padding: 0.2em 0.6em;
 		width:30%;
 		margin: 0 auto;
+		&:hover {
+			color: #ffc;
+			background-color: maroon;		
+		}
+	}
+
+
 }
-nav a:hover {
-	color: #ffc;
-	background-color: maroon;
-}
+
+
 .selected {
 	/* border-top: 2px solid $fontcolor; */
-	background-color: $header-background;
+	@include std-coloring;
+	/* use of a sass function */
+	background-color: complement($header-background); 
 	text-align: center;
 	padding: 0.2em 0;
+
 }
 
 section {
@@ -209,42 +226,45 @@ blockquote {
 	padding: 1em;
 	margin-left: 0;
 	position: relative;
-}
-blockquote::after {
-	content: "";
-	/* default is mobile - so background image is small */
-	background: url(../img/ghungroo_small.jpg);
+	&::after {
+		/* content: "";
+		background: url(../img/ghungroo_small.jpg); */
+		opacity: 0.3;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+	p {
+		font-weight: bold;
+	}
+	cite {
+		font-family: $body-font;
+		font-size: 0.85em;
+	}
 
-	/*background-color: maroon; */
-	opacity: 0.3;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: -1;
-	/*border-radius: 10px; */
+}
 
-}
-blockquote p {
-	font-weight: bold;
-}
-blockquote cite {
-	font-family: $body-font;
-	font-size: 0.85em;
-}
+$imgsize: "../img/ghungroo_small.jpg";
+@include blockquote-bkgnd($imgsize);
+
 footer {
+	/*
 	background-color: $header-background;
-	color:$fontcolor;
+	color:$fontcolor; */
+	@include std-coloring;
+
 	text-align: center;
 	padding: 1em 5em;
 	border-top: 5px solid maroon;
+	&::after {
+		content:"All images copyrights www.nehaparikhdance.com";
 
+	}
 }
-footer::after {
-	content:"All images copyrights www.nehaparikhdance.com";
 
-}
 .textcenter {
 	text-align: center;
 }
@@ -264,10 +284,7 @@ tr:nth-child(even) {
 	background-color: $nav-background;
 }
 /* my grid system */
-.row {
 
-
-}
 .row::after {
 	content:"";
 	display: table;
@@ -311,86 +328,91 @@ tr:nth-child(even) {
 	nav {
 		font-size: 1em;
 	}
+	$imgsize: "../img/ghungroo_small.jpg";
+	@include blockquote-bkgnd($imgsize);
 
-	blockquote::after {
+	/*blockquote::after {
 		content: "";
 		background: url(../img/ghungroo_small.jpg);
-	}
-}
-
-@media only screen and (min-width:768px) and (max-width: 1013px) {
-
-	.banner h1 {
-		font-size: 1.5em;
-		float:left;
-	}
-}
-
-
-/*anything bigger than a tablet is assumed to be desktop and above */
-@media only screen and (min-width:768px)
-{
-
-
-	.col-1 {
-		width: colwidth(1);  /*  14.3%;  */
+		} */
 	}
 
-	.col-2, .col-2-6 {
-		width: colwidth(2); /*30.6%; */
-	}
+	@media only screen and (min-width:768px) and (max-width: 1013px) {
 
-	.col-3 {
-		width: colwidth(3); /* 47%; */
-	}
-
-	.col-4 {
-		width: colwidth(4); /* 63.2%; */
-	}
-
-	.col-5 {
-		width: colwidth(5); /* 79.5%; */
-	}
-
-	.col-6 {
-		width: colwidth(6); /* 96%; */
-	}
-
-	.hide-m {
-		display: block;
+		.banner h1 {
+			font-size: 1.5em;
+			float:left;
+		}
 	}
 
 
-	nav {
-		font-size: 1.2em;
+	/*anything bigger than a tablet is assumed to be desktop and above */
+	@media only screen and (min-width:768px)
+	{
+
+		.col-1 {
+			width: colwidth(1);  /*  14.3%;  */
+		}
+
+		.col-2, .col-2-6 {
+			width: colwidth(2); /*30.6%; */
+		}
+
+		.col-3 {
+			width: colwidth(3); /* 47%; */
+		}
+
+		.col-4 {
+			width: colwidth(4); /* 63.2%; */
+		}
+
+		.col-5 {
+			width: colwidth(5); /* 79.5%; */
+		}
+
+		.col-6 {
+			width: colwidth(6); /* 96%; */
+		}
+
+		.hide-m {
+			display: block;
+		}
+
+
+		nav {
+			font-size: 1.2em;
+		}
+
+		$imgsize: "../img/ghungroo_big.jpg";
+		@include blockquote-bkgnd($imgsize);
+
+	/*	blockquote::after {
+			content: "";
+			background: url(../img/ghungroo_big.jpg); 
+		} */
 	}
 
-		blockquote::after {
-		content: "";
-		background: url(../img/ghungroo_big.jpg); /* background image for desktop */
+	@media only screen and (min-width: 1014px)
+	{
+		.banner h1 {
+			font-size: 2em;
+			float:left;
+		}
 	}
-}
 
-@media only screen and (min-width: 1014px)
-{
-	.banner h1 {
-		font-size: 2em;
-		float:left;
+	/* fluid video test - obtained from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 1px solid silver;
+		}
 	}
-}
 
-/* fluid video test - obtained from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 1px solid silver;
-}
