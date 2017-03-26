@@ -5,9 +5,11 @@ $body-background: darken($header-background, 15%);
 $nav-background: #003a04;
 
 $fontcolor: cornsilk;
+$info-color: MediumSpringGreen; 
+$border-color: maroon;
 $body-font: $georgia;  /*'Georgia', 'Times New Roman', serif; */
 $header-font: 'Droid Serif', serif;
-$border-std: 2px solid maroon;
+$border-std: 2px solid $border-color;
 
 $onecol : 14.3%;  /* default width of 1/6 column on a desktop for a 6 col grid */
 $gutter: 2%;   /* space between cols */

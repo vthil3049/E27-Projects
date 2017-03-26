@@ -1,10 +1,12 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 @import "bourbon"; /* @thoughtbot/bourbon */
+@import "neat";
 @import "normalize";
 @import "variables";
 @import "functions";
 @import "mixins";
+@import "refills";
 
 html {
 	box-sizing: border-box;
@@ -45,7 +47,7 @@ a {
 }
 
 .text-info {
-	color: MediumSpringGreen;  /* a brighter green */
+	color: $info-color; /* MediumSpringGreen;  / a brighter green */
 }
 
 .wrapper {
@@ -89,7 +91,7 @@ header {
 
 	img {
 		float:left;
-		border: 2px solid red;
+		border: $border-std;
 		/* 		border-radius: 100px; */
 		@include border-top-radius(100px);
 		margin: 10px 0 10px 40px;
@@ -169,10 +171,6 @@ nav {
 
 }
 
-//  SCSS syntax
-//  .some-element {
- //     @include transition(all 5s $ease-in-circ);
-//  }
 .selected {
 
 	/* border-top: 2px solid $fontcolor; */
@@ -246,6 +244,10 @@ td, th {
 
 tr:nth-child(even) {
 	background-color: $nav-background;
+}
+/*Bourbon triangle for go to top at the bottom of the page*/
+.uptriangle{
+	@include triangle(1em, $info-color, up);
 }
 
 
@@ -375,3 +377,4 @@ tr:nth-child(even) {
 		display: none;
 	} 
 }
+
