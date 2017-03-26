@@ -1,0 +1,33 @@
+
+@mixin std-coloring
+{
+	background-color: $header-background;
+	color: $fontcolor;
+}
+
+@mixin blockquote-bkgnd($url){
+	blockquote::after {
+		content: "";
+		background: url($url);
+	}
+}
+
+@mixin banner-h-size($size){
+	.banner h1 {
+		font-size: $size;
+		float:left;
+	}
+}
+
+/* mixin with if then else and a default of left align */
+@mixin textalign($align:left) {
+  @if $align == right {
+    text-align: right;
+  }
+  @else if $align == left {
+    text-align: left;
+  }
+  @else if $align== center{
+    text-align: center;
+  }
+}

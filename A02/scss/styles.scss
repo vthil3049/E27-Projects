@@ -1,68 +1,9 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
-/* variables */
-$header-background: #0a1f6b;
-/* use of a sass builting function below */
-$body-background: darken($header-background, 15%);
-$nav-background: #003a04;
-
-$fontcolor: cornsilk;
-$body-font: 'Georgia', 'Times New Roman', serif;
-$header-font: 'Droid Serif', serif;
-$border-std: 2px solid maroon;
-
-$onecol : 14.3%;  /* default width of 1/6 column on a desktop for a 6 col grid */
-$gutter: 2%;   /* space between cols */
-$base-font-size: 16px;
-
-
-/* custom functions */
-@function pxtoem ($px, $base: $base-font-size) {
-	@return ($px / $base) * 1em;
-}
-
-@function oneless($numval)
-{
-	@return ($numval - 1);
-}
-/* custom function to calculate %width based on number of columns for the grid system*/
-@function colwidth($numcols)
-{
-	@return ($numcols*$onecol+ oneless($numcols)*$gutter);
-}
-
-
-@mixin std-coloring
-{
-	background-color: $header-background;
-	color: $fontcolor;
-}
-
-@mixin blockquote-bkgnd($url){
-	blockquote::after {
-		content: "";
-		background: url($url);
-	}
-}
-
-@mixin banner-h-size($size){
-	.banner h1 {
-		font-size: $size;
-		float:left;
-	}
-}
-
-/* mixin with if then else and a default of left align */
-@mixin textalign($align:left) {
-  @if $align == right {
-    text-align: right;
-  }
-  @else if $align == left {
-    text-align: left;
-  }
-  @else if $align== center{
-    text-align: center;
-  }
-}
+@import "bourbon"; /* @thoughtbot/bourbon */
+@import "normalize";
+@import "variables";
+@import "functions";
+@import "mixins";
 
 html {
 	box-sizing: border-box;
@@ -148,7 +89,8 @@ header {
 	img {
 		float:left;
 		border: 2px solid red;
-		border-radius: 100px;
+		/* 		border-radius: 100px; */
+		@include border-top-radius(100px);
 		margin: 10px 0 10px 40px;
 	}
 }
@@ -226,15 +168,19 @@ nav {
 
 }
 
-
+//  SCSS syntax
+//  .some-element {
+ //     @include transition(all 5s $ease-in-circ);
+//  }
 .selected {
+
 	/* border-top: 2px solid $fontcolor; */
 	@include std-coloring;
 	/* use of a  built-in sass function */
 	background-color: complement($header-background); 
 	text-align: center;
 	padding: 0.2em 0;
-
+	 @include transition(all 10s $ease-in-circ);
 }
 
 section {
@@ -260,6 +206,7 @@ blockquote {
 	}
 	cite {
 /* extend */
+	 @include transition(all 10s $ease-in-circ);
 		@extend body;
 
 		/*font-family: $body-font;

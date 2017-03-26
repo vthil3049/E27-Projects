@@ -5,7 +5,7 @@ $body-background: darken($header-background, 15%);
 $nav-background: #003a04;
 
 $fontcolor: cornsilk;
-$body-font: 'Georgia', 'Times New Roman', serif;
+$body-font: $georgia;  /*'Georgia', 'Times New Roman', serif; */
 $header-font: 'Droid Serif', serif;
 $border-std: 2px solid maroon;
 

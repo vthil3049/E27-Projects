@@ -1,0 +1,15 @@
+
+/* custom functions */
+@function pxtoem ($px, $base: $base-font-size) {
+	@return ($px / $base) * 1em;
+}
+
+@function oneless($numval)
+{
+	@return ($numval - 1);
+}
+/* custom function to calculate %width based on number of columns for the grid system*/
+@function colwidth($numcols)
+{
+	@return ($numcols*$onecol+ oneless($numcols)*$gutter);
+}
