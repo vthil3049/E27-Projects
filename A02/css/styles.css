@@ -1,4 +1,5 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 /* @thoughtbot/bourbon */
 /*!normalize.css v2.1.3|MIT License|git.io/normalize*/
 /* line 10, C:/Users/Vani/Documents/HarvardOnline/WIN_Scout-App_2.12.12/Scout-App/scout-files/mixins/_normalize.sass */
@@ -252,17 +253,17 @@ table {
 /* custom functions */
 /* custom function to calculate %width based on number of columns for the grid system*/
 /* mixin with if then else and a default of left align */
-/* line 8, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 9, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 11, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 12, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 15, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 16, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 body, blockquote cite {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   color: cornsilk;
@@ -272,42 +273,42 @@ body, blockquote cite {
   margin: 0;
 }
 
-/* line 24, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 25, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Serif", serif;
 }
 
-/* line 28, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 29, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 a {
   color: cyan;
 }
 
 /* trying to recreate some bootstrap like typography */
-/* line 33, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 34, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .text-center {
   text-align: center;
   /* text-align: center; */
 }
 
-/* line 37, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 38, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .text-right {
   text-align: right;
   /* text-align: right; */
 }
 
-/* line 41, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 42, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .text-left {
   text-align: left;
   /* text-align: left; */
 }
 
-/* line 46, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 47, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .text-info {
   color: MediumSpringGreen;
   /* a brighter green */
 }
 
-/* line 50, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 51, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .wrapper {
   border: 2px solid maroon;
   width: 95%;
@@ -323,30 +324,30 @@ a {
 }
 
 /* header font size on mobile */
-/* line 60, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 61, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .banner {
   overflow: auto;
 }
 
 /* multiple levels of nesting */
-/* line 65, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 66, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .social {
   float: right;
   margin-right: 2em;
 }
 
-/* line 68, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 69, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .social a {
   color: cornsilk;
 }
 
-/* line 70, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 71, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .social a:hover {
   color: yellow;
 }
 
 /* nesting */
-/* line 77, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 78, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 header, footer {
   background-color: #0a1f6b;
   color: cornsilk;
@@ -355,7 +356,7 @@ header, footer {
   border: 2px solid maroon;
 }
 
-/* line 82, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 83, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 header h1, footer h1 {
   margin: 1em 0 0 1.5em;
   padding: 0em 0 0 1em;
@@ -363,7 +364,7 @@ header h1, footer h1 {
   float: left;
 }
 
-/* line 89, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 90, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 header img, footer img {
   float: left;
   border: 2px solid red;
@@ -373,12 +374,12 @@ header img, footer img {
   margin: 10px 0 10px 40px;
 }
 
-/* line 99, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 100, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 section, aside {
   overflow: auto;
 }
 
-/* line 102, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 103, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 main img, section img, aside img {
   display: block;
   float: left;
@@ -387,40 +388,40 @@ main img, section img, aside img {
   max-width: 100%;
 }
 
-/* line 111, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 112, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .img-center {
   float: none;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 117, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 118, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .floatleft {
   float: left;
   margin: 0 1em 1em 0;
   /* order for 4 numbers is TRouBLe */
 }
 
-/* line 122, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 123, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .floatright {
   float: right;
   margin: 0 0 1em 1em;
   /* order for 4 numbers is TRouBLe */
 }
 
-/* line 127, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 128, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .clearfloat {
   clear: both;
 }
 
 /* floats: you can combine with other styles, shown here for clarity */
-/* line 132, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 133, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 aside h2 {
   text-align: center;
 }
 
 /* nesting multi level */
-/* line 137, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 138, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 nav {
   font-family: "Droid Serif", serif;
   font-size: 0.8em;
@@ -429,7 +430,7 @@ nav {
   background-color: #003a04;
 }
 
-/* line 143, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 144, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 nav ul {
   padding: 0;
   margin: 0;
@@ -437,13 +438,13 @@ nav ul {
   text-align: center;
 }
 
-/* line 149, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 150, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 nav li {
   display: inline;
   padding-right: 0.5em;
 }
 
-/* line 155, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 156, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 nav a {
   display: inline-block;
   text-decoration: none;
@@ -453,13 +454,13 @@ nav a {
   margin: 0 auto;
 }
 
-/* line 162, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 163, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 nav a:hover {
   color: #ffc;
   background-color: maroon;
 }
 
-/* line 175, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 176, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .selected {
   /* border-top: 2px solid $fontcolor; */
   background-color: #0a1f6b;
@@ -473,19 +474,19 @@ nav a:hover {
   transition: all 10s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
-/* line 186, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 187, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 section {
   overflow: auto;
 }
 
-/* line 191, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 192, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 blockquote {
   padding: 1em;
   margin-left: 0;
   position: relative;
 }
 
-/* line 195, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 196, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 blockquote::after {
   opacity: 0.3;
   top: 0;
@@ -496,12 +497,12 @@ blockquote::after {
   z-index: -1;
 }
 
-/* line 204, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 205, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 blockquote p {
   font-weight: bold;
 }
 
-/* line 207, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 208, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 blockquote cite {
   /* extend */
   -webkit-transition: all 10s cubic-bezier(0.6, 0.04, 0.98, 0.335);
@@ -518,45 +519,45 @@ blockquote::after {
   background: url("../img/ghungroo_small.jpg");
 }
 
-/* line 222, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 223, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 footer {
   text-align: center;
   padding: 1em 5em;
   border-top: 5px solid maroon;
 }
 
-/* line 229, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 230, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 footer::after {
   content: "All images copyrights www.nehaparikhdance.com";
 }
 
-/* line 235, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 236, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 table {
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 240, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 241, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 td, th {
   border: 1px solid orange;
   text-align: center;
   padding: 0.2em;
 }
 
-/* line 246, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 247, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 tr:nth-child(even) {
   background-color: #003a04;
 }
 
 /* my grid system */
-/* line 251, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 254, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .row::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 256, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 259, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 [class*='col-'] {
   float: left;
   margin-left: 2%;
@@ -565,31 +566,26 @@ tr:nth-child(even) {
 }
 
 /* mobile first approach - columns are all together 96% wide */
-/* line 264, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 267, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-2-6 {
   width: 95.8%;
   /*  96%;  */
 }
 
-/* line 268, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
-.hide-m {
-  display: none;
-}
-
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   /* tablet */
   /* columns 3 & above become full width */
-  /* line 276, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 275, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-3, .col-4, .col-5, .col-6, .col-2-6 {
     width: 95.8%;
     /* 96%;  */
   }
-  /* line 279, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 278, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-1, .col-2 {
     width: 46.9%;
     /*  47%;  */
   }
-  /* line 282, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 281, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .hide-m {
     display: block;
   }
@@ -598,7 +594,7 @@ tr:nth-child(even) {
     font-size: 1.2em;
     float: left;
   }
-  /* line 287, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 286, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   nav {
     font-size: 1em;
   }
@@ -623,41 +619,41 @@ tr:nth-child(even) {
 
 /*anything bigger than a tablet is assumed to be desktop and above */
 @media only screen and (min-width: 768px) {
-  /* line 309, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 308, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-1 {
     width: 14.3%;
     /*  14.3%;  */
   }
-  /* line 313, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 312, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-2, .col-2-6 {
     width: 30.6%;
     /*30.6%; */
   }
-  /* line 317, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 316, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-3 {
     width: 46.9%;
     /* 47%; */
   }
-  /* line 321, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 320, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-4 {
     width: 63.2%;
     /* 63.2%; */
   }
-  /* line 325, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 324, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-5 {
     width: 79.5%;
     /* 79.5%; */
   }
-  /* line 329, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 328, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .col-6 {
     width: 95.8%;
     /* 96%; */
   }
-  /* line 333, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 332, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   .hide-m {
     display: block;
   }
-  /* line 338, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  /* line 337, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
   nav {
     font-size: 1.2em;
   }
@@ -668,7 +664,7 @@ tr:nth-child(even) {
   }
   /*	blockquote::after {
 			content: "";
-			background: url(../img/ghungroo_big.jpg); 
+			background: url(../img/ghungroo_big.jpg);
 		} */
 }
 
@@ -681,7 +677,7 @@ tr:nth-child(even) {
 }
 
 /* fluid video test - obtained from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-/* line 358, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 357, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -690,7 +686,7 @@ tr:nth-child(even) {
   height: 0;
 }
 
-/* line 363, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+/* line 362, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
 .videoWrapper iframe {
   position: absolute;
   top: 0;
@@ -698,6 +694,13 @@ tr:nth-child(even) {
   width: 100%;
   height: 100%;
   border: 1px solid silver;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 374, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+  .hide-m {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=../css/styles.map */

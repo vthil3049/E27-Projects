@@ -4,8 +4,8 @@
 	<title>Neha's Classical Dance School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://use.fontawesome.com/6ec538c526.js" async></script>
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
+<!-- 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css"> -->
 	<link rel="stylesheet" href="css/styles.css">
 	<script>
 	    // Picture element HTML5 shiv
@@ -27,7 +27,7 @@
 			</picture>
 			<h1>Neha's Classical Dance Academy</h1>
 			<div class="social">
-				<h4>Connect
+				<h4>
 					<a href="https://www.facebook.com"><i class="fa fa-facebook-square" aria-label="facebook" aria-hidden="true"></i></a>&nbsp;
 					<a href="https://www.pinterest.com"><i class="fa fa-pinterest" aria-label="pinterest" aria-hidden="true"></i></a>
 				</h4>
@@ -47,7 +47,13 @@
 			<h2 class="text-info text-center">About Neha</h2>
 			<section id="left" class="col-3">
 				<div class="row">
-					<img class="img-center" src="img/NehaAboutBig.jpg" alt="Neha profile pic" title="Neha, eminent dancer, teacher, choreographer"/>
+											<picture>
+				<source srcset="img/NehaAboutBig.jpg" media="(min-width: 1014px)">
+				<source srcset="img/NehaAboutMed.jpg" media="(min-width: 702px)">
+				<source srcset="img/NehaAboutSmall.jpg" media="(min-width: 479px)">
+						<img class="img-center" src="img/NehaAboutMed.jpg.jpg"  alt=Neha profile pic" title="Neha, eminent dancer, teacher, choreographer">
+					</picture>
+<!-- 					<img class="img-center" src="img/NehaAboutBig.jpg" alt="Neha profile pic" title="Neha, eminent dancer, teacher, choreographer"/> -->
 				</div>
 				<h3 class="text-info">Early influences</h3>
 				<div class="row">

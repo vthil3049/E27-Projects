@@ -1,4 +1,5 @@
 /* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 @import "bourbon"; /* @thoughtbot/bourbon */
 @import "normalize";
 @import "variables";
@@ -161,7 +162,7 @@ nav {
 		margin: 0 auto;
 		&:hover {
 			color: #ffc;
-			background-color: maroon;		
+			background-color: maroon;
 		}
 	}
 
@@ -177,7 +178,7 @@ nav {
 	/* border-top: 2px solid $fontcolor; */
 	@include std-coloring;
 	/* use of a  built-in sass function */
-	background-color: complement($header-background); 
+	background-color: complement($header-background);
 	text-align: center;
 	padding: 0.2em 0;
 	 @include transition(all 10s $ease-in-circ);
@@ -246,6 +247,8 @@ td, th {
 tr:nth-child(even) {
 	background-color: $nav-background;
 }
+
+
 /* my grid system */
 
 .row::after {
@@ -263,10 +266,6 @@ tr:nth-child(even) {
 /* mobile first approach - columns are all together 96% wide */
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-2-6 {
 	width: colwidth(6); /*  96%;  */
-}
-
-.hide-m {
-	display: none;
 }
 
 @media only screen and (min-width:480px) and (max-width: 767px)
@@ -344,7 +343,7 @@ tr:nth-child(even) {
 
 	/*	blockquote::after {
 			content: "";
-			background: url(../img/ghungroo_big.jpg); 
+			background: url(../img/ghungroo_big.jpg);
 		} */
 	}
 
@@ -370,3 +369,9 @@ tr:nth-child(even) {
 		}
 	}
 
+
+@media only screen and (max-width:600px){
+	.hide-m {
+		display: none;
+	} 
+}
