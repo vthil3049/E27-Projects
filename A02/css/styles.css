@@ -367,12 +367,14 @@ table {
   font-weight: bold;
   line-height: 1em;
   margin: 0;
+  color: #030b25;
 }
 
-/* line 110, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 111, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 #map_canvas #bodyContent p {
   font-size: 1em;
   margin: 0;
+  color: #030b25;
 }
 
 /* line 11, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
