@@ -285,7 +285,7 @@ table {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 35, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 37, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card .card-image {
   background-color: #F8F2B4;
   height: 150px;
@@ -293,7 +293,7 @@ table {
   overflow: hidden;
 }
 
-/* line 41, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 43, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card .card-image img {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -302,7 +302,7 @@ table {
   width: 100%;
 }
 
-/* line 49, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 51, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card .card-header {
   background-color: #003a04;
   border-bottom: 1px solid #4d0000;
@@ -313,36 +313,66 @@ table {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 59, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 61, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card .card-copy {
   font-size: 0.9em;
   line-height: 1.5em;
   padding: 0.75em 0.75em;
 }
 
-/* line 64, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 66, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card .card-copy p {
   margin: 0 0 0.75em;
 }
 
-/* line 69, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 71, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card:focus, .card:hover {
   cursor: pointer;
 }
 
-/* line 73, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 75, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card:focus img, .card:hover img {
   opacity: 0.7;
 }
 
-/* line 78, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 80, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card:active {
   background-color: #081854;
 }
 
-/* line 81, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+/* line 83, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
 .card:active .card-header {
   background-color: #081854;
+}
+
+/* line 90, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+#map_canvas {
+  height: 300px;
+  width: 100%;
+}
+
+/* line 95, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+#map_canvas img {
+  max-width: none;
+}
+
+/* line 99, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+#map_canvas .content {
+  padding: 0 0.5em 1em 0.5em;
+}
+
+/* line 103, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+#map_canvas .firstHeading {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
+}
+
+/* line 110, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/_refills.scss */
+#map_canvas #bodyContent p {
+  font-size: 1em;
+  margin: 0;
 }
 
 /* line 11, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
