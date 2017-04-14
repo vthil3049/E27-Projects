@@ -2,23 +2,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chidambaram Nritya Kala Academy</title>
+	<title>Neha's Classical Dance Academy</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/uikit.gradient.min.css" />
+	<link rel="stylesheet" href="css/components/dotnav.gradient.min.css" />	
 	<link rel="stylesheet" href="css/styles.css" />	
 	<script
 	src="https://code.jquery.com/jquery-3.2.1.min.js"
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous"></script>
 	<script src="js/uikit.min.js"></script>
+	<script src="js/components/slideshow.min.js"></script>
+
 </head>
-<body id="profile" class="container-fluid">
+<body id="profile">
 	<div class="uk-grid">
-		<div class="uk-width-medium-1-1 uk-panel"> <!-- jumbotron -->
-			<img title="Nataraj- Lord of Dance" alt="image of Nataraj, Lord of Dance" class="uk-float-left" src="images/Shiva2-small-grayscale.jpg" />
+		<div class="uk-width-medium-5-6 uk-panel"> <!-- jumbotron -->
+			<img title="Nataraj- Lord of Dance" alt="image of Nataraj, Lord of Dance" class="uk-float-left logo-img" src="images/Shiva2-small-grayscale.jpg" />
 			<h1 class="uk-text-center uk-text-success">Neha's Classical Dance Academy</h1>
 			<h3 class="uk-text-uppercase  uk-text-center uk-text-success">Director: Ms.  Neha Parikh</h3>
 		</div>	
+		<div class="uk-width-medium-1-6 uk-panel uk-hidden-small">
+			<ul class="uk-nav social">
+				<li>
+					<a href="https://www.facebook.com" title="Connect on Facebook"><i class="uk-icon-facebook-square uk-icon-medium"></i></a>
+					<a href="https://www.linkedin.com" title="Connect on LinkedIn"><i class="uk-icon-linkedin-square uk-icon-medium"></i></a>	
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="uk-grid">
 		<div class="uk-width-1-1">
@@ -28,7 +39,7 @@
 				</a>
 				<ul class="uk-navbar-nav uk-hidden-small">
 					<li><a href="index.html">Home</a></li>
-					<li class="uk-active"><a href="Profile.html">Profile</a></li>
+					<li class="uk-active"><a href="profile.html">Profile</a></li>
 					<li><a href="">The Art</a></li>	
 					<li><a href="">The Academy</a></li>		
 				</ul>
@@ -37,7 +48,7 @@
 	</div>	
 	<div class="uk-grid uk-grid-divider">
 		<div class="uk-width-medium-4-10 uk-push-1-10">
-		<h3 class="text-info text-center">About Neha</h3>
+			<h3 class="text-info text-center">About Neha</h3>
 			<p>Neha is a talented dancer  who showed a lot of promise and deep interest in dance from a very young age.  She was exposed to the beautiful and intense art form of Bharata Natyam from a tender age of 7.  Her love for this art, persuaded her to take up professional training in Bharata Natyam from <a href="http://www.nalandadanceeducation.com/">Nalanda Nritya Kala Mahavidhyalaya (Nalanda College of Classical Dance)</a> in Mumbai, India.<br /><br />
 				This internationally famous institution was founded by Padmashri Dr. Kanak Rele.
 				Neha completed her Bachelor's and Master's in fine arts (Classical dance) from Nalanda specializing in <strong class="text-info">Bharatanatyam.</strong> She is also a trained artiste in <strong class="text-info">Mohiniattam.</strong><br/><br/>
@@ -58,25 +69,38 @@
 			<p>
 				<img title="Neha during her arangetram" alt="Neha during her arangetram" src="images/Profile/Neha600_35_Profile.jpg" class="img-responsive floatleft" />
 			</p>
-			<div class="center-block">
-				<img title="Neha performing as Valli" alt="Neha performing as Valli" src="images/Profile/ProfilePage-AsValli.jpg" class="img-responsive floatleft" />
-				<img title="Neha during her arangetram" alt="Neha during her arangetram" src="images/Profile/Neha600_22.jpg" class="img-responsive floatleft" />
-			</div>
+
+
+			<img title="Neha performing as Valli" alt="Neha performing as Valli" src="images/Profile/ProfilePage-AsValli.jpg" class="img-responsive floatleft" />
+			<img title="Neha during her arangetram" alt="Neha during her arangetram" src="images/Profile/Neha600_22.jpg" class="img-responsive floatleft" />
+
 		</div>
 	</div>
-	<footer class="uk-grid">
-		<div class="uk-width-medium-1-1 uk-block uk-text-center">
 
+	<footer class="uk-grid">
+		<div class="uk-width-medium-9-10 uk-block uk-text-center">
 			<p class="uk-text-info">&copy; 2011-2017 Neha Parikh</p>
 		</div>
-
+		<div class="uk-width-medium-1-10 uk-block">
+		<a href="#profile" title="Go to top"><i class="uk-icon-chevron-up uk-icon-medium"></i></a>
+		</div>
+		<div>
+			<div class="uk-width-small-1-1 uk-visible-small uk-text-center">
+				<ul class="uk-nav social">
+					<li>
+						<a href="https://www.facebook.com" title="Connect on Facebook"><i class="uk-icon-facebook-square uk-icon-small"></i></a>
+						<a href="https://www.linkedin.com" title="Connect on LinkedIn"><i class="uk-icon-linkedin-square uk-icon-small"></i></a>										
+					</li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<div id="offcanvas" class="uk-offcanvas">
 		<div class="uk-offcanvas-bar">
 			<ul class="uk-nav uk-nav-offcanvas">
 				<li class="uk-active"><a href="">Home</a></li>
-				<li><a href="">Profile</a></li>
-				<li><a href="">The Art</a></li>	
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="the-art.html">The Art</a></li>	
 				<li><a href="">The Academy</a></li>	
 			</ul>
 		</div>
