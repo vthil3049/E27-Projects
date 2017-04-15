@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Neha's Classical Dance Academy</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/uikit.gradient.min.css" />
@@ -46,7 +47,7 @@
 	</div>
 	<div class="uk-grid uk-grid-divider">
 		<aside class="uk-width-medium-1-5">
-			<div class="uk-panel uk-text-center" ">
+			<div class="uk-panel uk-text-center">
 				<h4 class="uk-text-info uk-text-center">A modern air-conditioned studio, centrally located and with adequate parking</h4>
 				<p><i class="uk-icon-map-marker"></i>&nbsp;&nbsp;
 					<a href="https://goo.gl/maps/TJpZj" target="_blank">Address:491, Amherst Street Unit 14, Nashua NH 03063</a></p>
@@ -69,7 +70,7 @@
 						</div>
 						<p>Neha founded the academy in early 2005. Here she inspires all her students to strive for perfection and the individual focused training brings out the best in them. She is very popular in the Nashua area for her authentic style of teaching and uncompromising discipline that helps her students reach the highest standards in dance.</p>
 						<p>While she specializes in teaching <span class="text-info">Bharatanatyam</span> and <span class="text-info">Mohiniattam</span> she is very knowledgeable and adept with the Folk dances of India. She also teaches the popular <span class="text-info">Bollywood</span> style dances.</p>
-						<div uk-grid>
+						<div class="uk-grid">
 							<h3 class="uk-text-center">Contact Neha today</h3>
 							<form class="uk-form">
 								<fieldset class="uk-fieldset" data-uk-margin>
@@ -84,7 +85,7 @@
 								<fieldset>
 									<div class="uk-form-select uk-form-row uk-form-width-large" data-uk-form-select>
 										<span>I'm looking for a class for a</span><br>
-										<select>
+										<select data-uk-dropdown>
 											<option value="">Girl</option>
 											<option value="">Boy</option>
 											<option value="">Myself(Adult)</option>
@@ -93,11 +94,12 @@
 								</fieldset>
 								<div id="upload-drop" class="uk-placeholder">
 									If you'd like Neha to custom choreograph for some music, please upload it here in mp3 format<br><br>
-									<a class="uk-form-file">Select a file <input id="upload-select" type="file"></a>
+									<a class="uk-form-file">Select a file</a> <br>
+									<input id="upload-select" type="file">
 								</div>
 
 								<div id="progressbar" class="uk-progress uk-hidden">
-									<div class="uk-progress-bar" style="width: 0%;">...</div>
+									<div class="uk-progress-bar" style="width: 0%;">Progress</div>
 								</div>
 								<fieldset>
 									<textarea placeholder="Type your Message Here...." tabindex="5" rows="6" cols="50" required></textarea>
@@ -126,8 +128,10 @@
 							<div class="card">
 								<table class="uk-table-condensed uk-table-hover">
 									<thead>
-										<th>Award</th>
-										<th>Year</th>
+										<tr>
+											<th>Award</th>
+											<th>Year</th>
+										</tr>
 									</thead>
 									<tr>
 										<td>NEMA Drishya 1st Place Winners</td>
@@ -180,7 +184,7 @@
 					</div>
 				</aside>
 			</div>
-		</div>
+<!-- 		</div> -->
 		<footer class="uk-grid">
 			<div class="uk-width-medium-9-10 uk-block uk-text-center">
 				<p class="uk-text-info">&copy; 2011-2017 Neha Parikh</p>
