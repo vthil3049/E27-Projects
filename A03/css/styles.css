@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	background-color: darkgray;
 }
 *, *:before, *:after {
 	box-sizing: inherit;
@@ -8,27 +9,25 @@ html {
 body {
 	font-family: 'Georgia', 'Times New Roman', serif;
 	padding: 0;
-	border: 1px solid blue;
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
+  color: cornsilk;
+  /* background-color: #000520; */
+  background-color: #030b25;	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:cornsilk;
 }
 
 .wrapper {
-	border: 1px solid blue;
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
 	float: none;
 }
 
-#home {
-	border: 1px solid red;
-}
-
-footer{
-	border: 1px solid green;
-}
 
 .social li a {
 	display:inline;
@@ -39,4 +38,49 @@ footer{
   /* 		border-radius: 100px; */
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
+}
+
+footer::after {
+  content: "All images copyrights www.nehaparikhdance.com";
+}
+
+/* line 234, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 239, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+td, th {
+  border: 1px solid orange;
+  text-align: center;
+  padding: 0.2em;
+}
+
+/* line 245, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A02/scss/styles.scss */
+tr:nth-child(even) {
+  background-color: #003a04;
+}
+tr:nth-child(odd) {
+  background-color: midnightblue;
+}
+nav, #navbar-top, {
+	  background-color: #003a04;
+}
+
+nav a {
+  color: cornsilk;
+  background-color: maroon;	
+}
+
+nav a:hover {
+  color: cornsilk;
+  background-color: midnightblue;	
+}
+.uk-navbar {
+	background-color: navy;
+}
+.uk-accordion-title {
+	background-color:#030b25 ;
+	border: 1px maroon dotted;
 }
