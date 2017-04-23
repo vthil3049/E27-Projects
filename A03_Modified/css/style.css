@@ -2511,8 +2511,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 /* line 75, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/core/navbar.scss */
 .uk-navbar {
-  background: #eee;
-  color: #444;
+  background: #373C7A;
+  color: #7a7537;
 }
 
 /*
@@ -2564,7 +2564,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   padding: 0 15px;
   line-height: 40px;
   /* 2 */
-  color: #444;
+  color: #c8c385;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -2664,7 +2664,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 /* line 227, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/core/navbar.scss */
 .uk-navbar-content > a:not([class]) {
-  color: #07D;
+  color: #c8c385;
 }
 
 /* line 228, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/core/navbar.scss */
@@ -2699,7 +2699,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* line 257, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/core/navbar.scss */
 .uk-navbar-toggle {
   font-size: 18px;
-  color: #444;
+  color: #7a7537;
   text-decoration: none;
 }
 
@@ -3967,7 +3967,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   padding: 4px 6px;
   /* 4 */
   border: 1px solid #ddd;
-  background: #fff;
+  background: blanchedalmond;
   color: #444;
   -webkit-transition: all 0.2s linear;
   -webkit-transition-property: border, background, color, box-shadow, padding;
@@ -11843,6 +11843,53 @@ a.uk-thumbnail:focus {
   }
 }
 
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+/* Sub-object: `uk-accordion-title`
+ ========================================================================== */
+/* line 47, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/components/accordion.scss */
+.uk-accordion-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background: #eee;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  background-color: #373C7A;
+}
+
+/* Sub-object: `uk-accordion-content`
+ ========================================================================== */
+/* line 62, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/components/accordion.scss */
+.uk-accordion-content {
+  padding: 0 15px 15px 15px;
+}
+
+/*
+ * Micro clearfix to make panels more robust
+ */
+/* line 71, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/components/accordion.scss */
+.uk-accordion-content:before,
+.uk-accordion-content:after {
+  content: "";
+  display: table;
+}
+
+/* line 77, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/components/accordion.scss */
+.uk-accordion-content:after {
+  clear: both;
+}
+
+/*
+ * Remove margin from the last-child
+ */
+/* line 83, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/components/accordion.scss */
+.uk-accordion-content > :last-child {
+  margin-bottom: 0;
+}
+
 /* line 8, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
 body {
   width: 96%;
@@ -11854,6 +11901,63 @@ body {
   border: 2px solid #5AA6BE;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
+}
+
+/* line 24, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 30, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+td, th {
+  border: 1px solid #5AA6BE;
+  text-align: center;
+  padding: 0.2em;
+}
+
+/* line 36, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+th {
+  background-color: #373C7A;
+}
+
+/* line 40, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+tr:nth-child(even) {
+  background-color: #2d7091;
+}
+
+/* line 43, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+tr:nth-child(odd) {
+  background-color: #659f13;
+}
+
+/* line 46, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+footer::after {
+  content: "All images copyrights www.nehaparikhdance.com";
+}
+
+/* line 49, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+.social li a {
+  display: inline;
+}
+
+/* line 53, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+.social {
+  padding-top: 0.5em;
+}
+
+/* line 56, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+.parallax {
+  background-image: url(../images/Neha_Lasya_big.jpg);
+  background-size: cover;
+  height: 500px;
+}
+
+@media (max-width: 767px) {
+  /* line 64, C:/Users/Vani/Documents/HarvardOnline/DGMDE-27/E27-Projects/A03_Modified/scss/style.scss */
+  .social {
+    padding-bottom: 0.5em;
+  }
 }
 
 /*# sourceMappingURL=../css/style.map */

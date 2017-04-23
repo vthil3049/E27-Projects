@@ -4,7 +4,9 @@
 @mixin hook-nav-autocomplete-divider(){}
 @mixin hook-autocomplete-misc(){}
 @mixin hook-accordion(){}
-@mixin hook-accordion-title(){}
+@mixin hook-accordion-title(){
+	background-color: $navbar-background;
+}
 @mixin hook-accordion-content(){}
 @mixin hook-accordion-misc(){}
 @mixin hook-dotnav-item(){}

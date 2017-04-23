@@ -5,14 +5,15 @@
 	<title>Neha's Classical Dance Academy</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/components/dotnav.gradient.min.css" />	
-	<link rel="stylesheet" href="css/styles.css" />	
+	<!-- 	<link rel="stylesheet" href="css/uikit.gradient.min.css" /> -->
+	<!--     <link rel="stylesheet" href="css/styles.css" /> -->
 	<script
 	src="https://code.jquery.com/jquery-3.2.1.min.js"
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous"></script>
 	<script src="js/uikit.min.js"></script>
 	<script src="js/components/slideshow.min.js"></script>
+	<script src="js/components/parallax.min.js"></script>	
 </head>
 <body id="academy" class="uk-container-center">
 	<div class="uk-grid">
@@ -62,16 +63,18 @@
 					</div>		
 				</aside>
 				<div class="uk-width-medium-3-5">
-					<h2 class="uk-text-info uk-text-center">About the academy</h2>
-					<h3 class="uk-text-info uk-text-center">A student first centered approach to teaching</h3>
 					<main>
-						<div class="uk-text-center">
-							<img src="images/Neha_Lasya_small.jpg" class="img-center" alt="Neha with student" title="Neha with student on stage"/>
+												<h2 class="uk-text-info uk-text-center">About the academy</h2>
+						<div class="uk-text-center parallax" data-uk-parallax="{opacity: '1.0,0.3', scale: '1,0.5', velocity: '0.5'}">
+
+							<h2 class="uk-text-info uk-text-center">A student first centered approach to teaching</h2>
+							<h3 class="uk-text-info uk-text-center">All ages and stages are welcomed and given the appropriate attention</h3>
+	<!-- 						<h3 class="uk-text-info uk-text-center">Neha can also choreograph for one time performances for a minimum of 4 persons in a group. Please upload the music that you need choreography for in the form below.</h3> -->
 						</div>
 						<p>Neha founded the academy in early 2005. Here she inspires all her students to strive for perfection and the individual focused training brings out the best in them. She is very popular in the Nashua area for her authentic style of teaching and uncompromising discipline that helps her students reach the highest standards in dance.</p>
 						<p>While she specializes in teaching <span class="text-info">Bharatanatyam</span> and <span class="text-info">Mohiniattam</span> she is very knowledgeable and adept with the Folk dances of India. She also teaches the popular <span class="text-info">Bollywood</span> style dances.</p>
 						<div class="uk-grid">
-							<h3 class="uk-text-center">Contact Neha today</h3>
+							<h3 class="uk-text-center">Contact Neha today</h3><br/>
 							<form class="uk-form">
 								<fieldset class="uk-fieldset" data-uk-margin>
 									<input placeholder="Your name" type="text" class="uk-form-width-large" tabindex="1" required autofocus>
@@ -184,34 +187,34 @@
 					</div>
 				</aside>
 			</div>
-<!-- 		</div> -->
-		<footer class="uk-grid">
-			<div class="uk-width-medium-9-10 uk-block uk-text-center">
-				<p class="uk-text-info">&copy; 2011-2017 Neha Parikh</p>
-			</div>
-			<div class="uk-width-medium-1-10 uk-block">
-				<a href="#home" title="Go to top"><i class="uk-icon-chevron-up uk-icon-medium"></i></a>
-			</div>
-			<div>
-				<div class="uk-width-small-1-1 uk-visible-small uk-text-center">
-					<ul class="uk-nav social">
-						<li>
-							<a href="https://www.facebook.com" title="Connect on Facebook"><i class="uk-icon-facebook-square uk-icon-small"></i></a>
-							<a href="https://www.linkedin.com" title="Connect on LinkedIn"><i class="uk-icon-linkedin-square uk-icon-small"></i></a>										
-						</li>
+			<!-- 		</div> -->
+			<footer class="uk-grid">
+				<div class="uk-width-9-10 uk-block uk-text-center">
+					<p class="uk-text-info">&copy; 2011-2017 Neha Parikh</p>
+				</div>
+				<div class="uk-width-1-10 uk-block">
+					<a href="#" title="Go to top" data-uk-smooth-scroll="{duration: 2000}"><i class="uk-icon-chevron-up uk-icon-medium"></i></a>
+				</div>
+				<div>
+					<div class="uk-width-small-1-1 uk-visible-small uk-text-center">
+						<ul class="uk-nav social">
+							<li>
+								<a href="https://www.facebook.com" title="Connect on Facebook"><i class="uk-icon-facebook-square uk-icon-small"></i></a>
+								<a href="https://www.linkedin.com" title="Connect on LinkedIn"><i class="uk-icon-linkedin-square uk-icon-small"></i></a>										
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+			<div id="offcanvas" class="uk-offcanvas">
+				<div class="uk-offcanvas-bar">
+					<ul class="uk-nav uk-nav-offcanvas">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="the-art.html">The Art</a></li>	
+						<li  class="uk-active"><a href="academy.html">The Academy</a></li>	
 					</ul>
 				</div>
-			</div>
-		</footer>
-		<div id="offcanvas" class="uk-offcanvas">
-			<div class="uk-offcanvas-bar">
-				<ul class="uk-nav uk-nav-offcanvas">
-					<li class="uk-active"><a href="index.html">Home</a></li>
-					<li><a href="profile.html">Profile</a></li>
-					<li><a href="the-art.html">The Art</a></li>	
-					<li><a href="academy.html">The Academy</a></li>	
-				</ul>
-			</div>
-		</div>	
-	</body>
-	</html>
+			</div>	
+		</body>
+		</html>
