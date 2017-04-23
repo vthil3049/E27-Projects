@@ -1,0 +1,22 @@
+@import "uikit-variables";
+@import "uikit-mixins";
+
+// your custom code goes here, e.g. mixins, variables
+
+@import "uikit";
+
+body {
+	width:96%;
+	max-width: 1500px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	//color:$base-body-color;
+}
+
+.logo-img {
+	  border: 2px solid $base-hr-border;
+
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
