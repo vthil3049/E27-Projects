@@ -1,0 +1,69 @@
+@import "uikit-variables";
+@import "uikit-mixins";
+
+// your custom code goes here, e.g. mixins, variables
+
+@import "uikit";
+@import "components/accordion.scss";
+body {
+	width:96%;
+	max-width: 1500px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	//color:$base-body-color;
+}
+
+.logo-img {
+	border: 2px solid $base-hr-border;
+
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+
+td, th {
+	border: 1px solid $base-hr-border;
+	text-align: center;
+	padding: 0.2em;
+}
+
+th {
+	background-color:$navbar-background;
+}
+
+tr:nth-child(even) {
+	background-color: $text-primary-color ;
+}
+tr:nth-child(odd) {
+  background-color:  $text-success-color; //midnightblue;
+}
+footer::after {
+	content: "All images copyrights www.nehaparikhdance.com";
+}
+.social li a {
+	display:inline;
+}
+
+.social {
+	padding-top: 0.5em;
+}
+.parallax {
+
+	background-image: url(../images/Neha_Lasya_big.jpg);
+	background-size: cover;
+	height: 500px;
+}
+@media (max-width: $breakpoint-small-max) {
+
+	.social {
+		padding-bottom: 0.5em;
+	}
+
+}
+
