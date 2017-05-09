@@ -1,0 +1,93 @@
+
+/* transparent background hack: https://css-tricks.com/snippets/css/transparent-background-images/ */
+.wrapper {
+  width: 848px;
+  height: 900px;
+  display: block;
+  position: relative;
+  display: grid;
+  /*                   2    3    4     5      6      7    8 */
+ /* grid-template-rows: 18px 78px 374px 486px 726px  866px 890px; */
+   grid-template-rows: 18px 60px 296px 112px 240px  140px 28px; 
+   /*                      2    3    4     5      6    */ 
+ /* grid-template-columns: 82px 390px 620px  716px  845px  ; */
+  grid-template-columns: 82px 308px 320px  96px  130px  ; 
+/* grid-gap: 30px 20px;  */
+}
+.wrapper::after {
+  content: "";
+  background: url(848px-Tableau_I,_by_Piet_Mondriaan.png) no-repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;   
+}
+div {
+	border: 1px solid black;
+	background-color: white;
+}
+.a {
+ grid-row: 1 / 2;
+ grid-column: 1/3;
+}
+.b {
+grid-row: 2 / 5;
+ grid-column: 1/3;
+}
+.c {
+grid-row: 1 / 5;
+ grid-column: 3/5;
+}
+.d {
+grid-row: 1 / 3;
+ grid-column: 5/6;
+}
+.e {
+grid-row: 3 / 4;
+ grid-column: 5/6;
+}
+.f {
+grid-row: 4 / 5;
+grid-column: 5/6;
+}
+g {
+	grid-row: 5 / 8;
+  grid-column: 1/2;
+}
+.h {
+grid-row: 5 / 6;
+  grid-column: 2/3;
+}
+.i {
+grid-row: 5 / 7;
+  grid-column: 3/5;
+}
+.j {
+  grid-row: 5 / 8;
+  grid-column: 5/6;
+}
+.k {
+  grid-row: 6 / 7;
+    grid-column: 2/3;
+}
+.l {
+  grid-row: 7 / 8;
+      grid-column: 2/4;
+}
+.m {
+    grid-row: 7 / 8;
+    grid-column: 4/5;    
+}
+
+
+
+
+
+
+
+
+
+
