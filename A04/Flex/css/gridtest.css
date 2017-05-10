@@ -1,0 +1,48 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+div {
+	border: 1px solid grey;
+}
+.inline-block {
+	display: inline-block;
+	
+}
+.wrapper : {
+	display: grid;
+   grid-template-rows: min-content min-content min-content min-content;
+}
+
+.header : {
+	 grid-row: 1;
+	 display: grid;
+	 grid-template-rows: 1fr;
+	 grid-template-columns: 30em 100em 20em;
+}
+
+#logo {
+	grid-column: 1;
+}
+
+#heading {
+	grid-column: 2;
+}
+
+#social {
+	grid-column: 3;
+}
+.navbar : {
+	 grid-row: 2;
+}
+
+.main : {
+	 grid-row: 3;
+}
+
+.footer : {
+	 grid-row: 4;
+}

@@ -1,0 +1,147 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+div {
+	border: 1px solid grey;
+}
+
+.wrapper : {
+	display: flex;
+
+}
+
+.header : {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-end;
+} 
+.navbar ul {
+	display: flex;
+	flex-flow: column no-wrap;
+	justify-content: space-around;
+		/*align-items: left; */
+		align-content: center;
+}
+.navbar ul li {
+	display: inline;
+		list-style-type: none;
+		border: 1px solid blue;
+		background-color: red;
+		/*margin: auto; */
+		padding: 0 1em;
+}
+.inline-block {
+	display: inline-block;
+	
+}
+.row {
+
+	display: flex;
+	flex-flow: row no-wrap;
+	flex: 0 1 auto;
+	background-color: #ccc;
+}
+
+.main {
+	display: flex;
+	flex-flow: row wrap;
+}
+.themain {
+	order: -1;
+}
+
+.imp {
+	order: -2;
+}
+.hd-col-1 {
+		flex: 0 0 16%;
+}
+.hd-col-2 {
+		flex: 0 0 32%;
+}
+.hd-col-3 {
+		flex: 0 0 50%;
+}
+/* mobile first approach - columns are all together 96% wide */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-2-6 {
+	flex: 0 0 96%;
+}
+
+/* big phone to small tablet size */
+@media only screen and (min-width:480px) and (max-flex: 0 0 767px)
+{ /* tablet */
+
+	/* columns 3 & above become full width */
+	.col-3, .col-4, .col-5, .col-6, .col-2-6 {
+		flex: 0 0 96%;
+	}
+	.col-1, .col-2 {
+		flex: 0 0 47%;
+	}
+	.hide-m {
+		display: block;
+	}
+	.themain, .imp {
+		order: 1;
+	}
+	nav {
+		font-size: 1em;
+	}
+
+	blockquote::after {
+		content: "";
+		background: url(../img/ghungroo_small.jpg);
+	}
+}
+
+
+/*anything bigger than a tablet is assumed to be desktop and above */
+@media only screen and (min-width:768px)
+{
+
+	.col-1 {
+		flex: 0 0 14.3%;
+	}
+
+	.col-2, .col-2-6 {
+		flex: 0 0 30.6%;
+	}
+
+	.col-3 {
+		flex: 0 0 47%;
+	}
+
+	.col-4 {
+		flex: 0 0 63.2%;
+	}
+
+	.col-5 {
+		flex: 0 0 81.5%;
+	}
+
+	.col-6 {
+		flex: 0 0 96%;
+	}
+
+	.hide-m {
+		display: block;
+	}
+
+	.themain, .imp {
+		order: 1;
+	}
+
+	nav {
+		font-size: 1.2em;
+	}
+
+		blockquote::after {
+		content: "";
+		background: url(../img/ghungroo_big.jpg); /* background image for desktop */
+	}
+}

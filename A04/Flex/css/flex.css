@@ -1,0 +1,410 @@
+/* colors from color-hex 'Continental Marine' palette. URL:; http://www.color-hex.com/color-palette/32256 */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: cornsilk;
+    background-color: #000520;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Droid Serif', serif;
+}
+
+a {
+    color: cyan;
+}
+
+
+/* trying to recreate some bootstrap like typography */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-info {
+    color: MediumSpringGreen;
+    /* a brighter green */
+}
+
+.wrapper {
+    border: 2px solid orange;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.banner {
+    overflow: auto;
+}
+
+.banner h1 {
+    font-size: 1em;
+    float: left;
+}
+
+.social {
+    float: right;
+    margin-right: 2em;
+}
+
+.social a {
+    color: cornsilk;
+}
+
+.social a:hover {
+    color: yellow;
+}
+
+header {
+    background-color: #0a1f6b;
+    color: cornsilk;
+    width: 100%;
+    overflow: auto;
+    /* position: fixed; */
+    border: 3px solid maroon;
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#000080', GradientType=1 ); */
+}
+
+header h1 {
+    margin: 1em 0 0 1.5em;
+    padding: 0em 0 0 1em;
+    display: inline-block;
+    /*border: 1px solid white; */
+}
+
+header img {
+    float: left;
+    border: 2px solid red;
+    border-radius: 100px;
+    margin: 10px 0 10px 40px;
+}
+
+section,
+aside {
+    overflow: auto;
+}
+
+main img,
+section img,
+aside img {
+    display: block;
+    float: left;
+    margin-right: 1.875em;
+    width: auto;
+    max-width: 100%;
+}
+
+aside img {}
+
+.img-center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.floatleft {
+    float: left;
+    margin: 0 1em 1em 0;
+    /* order for 4 numbers is TRouBLe */
+}
+
+.floatright {
+    float: right;
+    margin: 0 0 1em 1em;
+    /* order for 4 numbers is TRouBLe */
+}
+
+.clearfloat {
+    clear: both;
+}
+
+
+/* floats: you can combine with other styles, shown here for clarity */
+
+aside h2 {
+    text-align: center;
+}
+
+header h1 {
+    /*width: 30%; */
+    float: left;
+}
+
+nav {
+    font-family: 'Droid Serif', serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-top: 1.5em;
+    background-color: #003a04;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-self: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+nav li {
+    display: inline;
+    padding-right: 0.5em;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: cornsilk;
+    padding: 0.2em 0.6em;
+}
+
+nav a:hover {
+    color: #ffc;
+    background-color: maroon;
+}
+
+.selected {
+    border-top: 2px solid cornsilk;
+}
+
+section {
+    overflow: auto;
+}
+
+blockquote {
+    padding: 1em;
+    margin-left: 0;
+    position: relative;
+}
+
+blockquote::after {
+    content: "";
+    /* default is mobile - so background image is small */
+    background: url(../img/ghungroo_small.jpg);
+    /*background-color: maroon; */
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    /*border-radius: 10px; */
+}
+
+blockquote p {
+    font-weight: bold;
+}
+
+blockquote cite {
+    font-family: 'Georgia', serif;
+    font-size: 0.85em;
+}
+
+footer {
+    background-color: #0a1f6b;
+    color: cornsilk;
+    text-align: center;
+    padding: 1em 5em;
+    border-top: 5px solid maroon;
+    display: flex;
+    flex-flow: row no-wrap;
+}
+
+footer::after {
+    content: "All images copyrights www.nehaparikhdance.com";
+}
+
+.textcenter {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid orange;
+    text-align: center;
+    padding: 0.2em;
+}
+
+tr:nth-child(even) {
+    background-color: #003a04;
+}
+
+
+/* my grid system */
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 auto;
+}
+
+
+/*.row::after {
+	content:"";
+	display: table;
+	clear: both;
+} */
+
+[class*='col-'] {
+    float: left;
+    margin-left: 2%;
+    min-height: 1px;
+    position: relative;
+}
+
+
+/* mobile first approach - columns are all together 96% wide */
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-2-6 {
+    width: 96%;
+}
+
+.hide-m {
+    display: none;
+}
+
+@media only screen and (min-width:480px) and (max-width: 767px) {
+    /* tablet */
+    /* columns 3 & above become full width */
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-2-6 {
+        width: 96%;
+    }
+    .col-1,
+    .col-2 {
+        width: 47%;
+    }
+    .hide-m {
+        display: block;
+    }
+    .banner h1 {
+        font-size: 1.2em;
+        float: left;
+    }
+    nav {
+        font-size: 1em;
+    }
+    blockquote::after {
+        content: "";
+        background: url(../img/ghungroo_small.jpg);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 1013px) {
+    .banner h1 {
+        font-size: 1.5em;
+        float: left;
+    }
+}
+
+
+/*anything bigger than a tablet is assumed to be desktop and above */
+
+@media only screen and (min-width:768px) {
+    .col-1 {
+        flex: 0 0 14.3%;
+    }
+    .col-2,
+    .col-2-6 {
+        width: 30.6%;
+    }
+    .col-3 {
+        width: 47%;
+    }
+    .col-4 {
+        width: 63.2%;
+    }
+    .col-5 {
+        width: 81.5%;
+    }
+    .col-6 {
+        width: 96%;
+    }
+    .hide-m {
+        display: block;
+    }
+    nav {
+        font-size: 1.2em;
+    }
+    blockquote::after {
+        content: "";
+        background: url(../img/ghungroo_big.jpg);
+        /* background image for desktop */
+    }
+}
+
+@media only screen and (min-width: 1014px) {
+    .banner h1 {
+        font-size: 2em;
+        float: left;
+    }
+}
+
+
+/* fluid video test - obtained from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid silver;
+}
