@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox test document</title>
-   <link rel="stylesheet" href="css/gridtest.css">
-
+    <title>Grid test document</title>
+    <link rel="stylesheet" href="css/gridtest.css">
 </head>
 
 <body>
@@ -13,7 +12,7 @@
         <div class='header'>
             <div class="inline-block hd-col-1" id="logo">One item goes here</div>
             <h1 class="inline-block hd-col-3" id="heading">Heading goes here.....   </h1>
-            <div class="inline-block hd-col-2" id="social">Another item goes here</div>
+            <div class="inline-block hd-col-1" id="social">Another item goes here</div>
         </div>
         <div class="navbar">
             <ul>
@@ -22,15 +21,20 @@
                 <li>item3</li>
             </ul>
         </div>
-        <div class="main">
-            <h1 class="col-3 themain">Main content goes here</h1>
-            <h2 class="inline-block col-1">Some content goes here</h2>
-            <h2 class="inline-block col-1 imp">Most important content goes here</h2>
+        <div class="main-container">
+<!--             <div  class="inline-block main-row" id="main"> -->
+                <h1 class="inline-block themain col-4">Main content goes here Lot mmore main content and more and more.....</h1>
+            <!-- </div> -->
+            <!-- <div class="inline-block" id="imp"> -->
+                <h2 class="inline-block imp col-2">Most important content goes here</h2>
+            <!-- </div> -->
         </div>
-        <div class="row footer">
-            <div class="inline-block hd-col-2">One item goes here</div>
-            <h1 class="inline-block hd-col-3">Footer main</h1>
-            <div class="inline-block hd-col-1">To Top</div>
+        <div class="footer">
+            <div class="footer-row">
+                <!--                 <div class="inline-block hd-col-2">One item goes here</div> -->
+                <h1 class="inline-block hd-col-3">Footer main</h1>
+                <div class="inline-block hd-col-1">To Top</div>
+            </div>
         </div>
     </div>
 </body>
