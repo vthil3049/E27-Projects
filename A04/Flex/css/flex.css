@@ -52,27 +52,25 @@ a {
 }
 
 .wrapper {
-    border: 2px solid orange;
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+
+}
+.inline-block {
+    display: inline-block;
+    
+}
+
+.row {
+
     display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-}
+    flex-flow: row no-wrap;
+    flex: 0 1 auto;
 
-.banner {
-    overflow: auto;
 }
-
-.banner h1 {
-    font-size: 1em;
-    float: left;
-}
-
 .social {
-    float: right;
-    margin-right: 2em;
+    
+    /*margin-right: 2em; */
 }
 
 .social a {
@@ -86,18 +84,20 @@ a {
 header {
     background-color: #0a1f6b;
     color: cornsilk;
-    width: 100%;
-    overflow: auto;
     /* position: fixed; */
     border: 3px solid maroon;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
     /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#000080', GradientType=1 ); */
 }
 
 header h1 {
     margin: 1em 0 0 1.5em;
     padding: 0em 0 0 1em;
-    display: inline-block;
     /*border: 1px solid white; */
+    font-size: 1em;
 }
 
 header img {
@@ -106,7 +106,17 @@ header img {
     border-radius: 100px;
     margin: 10px 0 10px 40px;
 }
+.main {
+    display: flex;
+    flex-flow: row wrap;
+}
+.themain {
+    order: -1;
+}
 
+.imp {
+    order: -2;
+}
 section,
 aside {
     overflow: auto;
@@ -155,22 +165,23 @@ aside h2 {
 
 header h1 {
     /*width: 30%; */
-    float: left;
+   /* float: left; */
 }
 
 nav {
+    width: 100%;
     font-family: 'Droid Serif', serif;
     font-size: 0.8em;
     font-weight: bold;
-    padding-top: 1.5em;
+    padding-top: 0.5em;
     background-color: #003a04;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    align-self: center;
+    align-items: center;
 }
 
-nav ul {
+/*nav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -184,7 +195,21 @@ nav li {
     display: inline;
     padding-right: 0.5em;
 }
-
+*/
+.navbar ul {
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-between;
+        /*align-items: left; */
+        align-content: center;
+}
+.navbar ul li {
+    display: inline-block;
+        list-style-type: none;
+        /*margin: auto; */
+        padding: 0 0.5em;
+        flex-basis: auto;
+}
 nav a {
     display: inline-block;
     text-decoration: none;
@@ -235,7 +260,8 @@ blockquote cite {
     font-size: 0.85em;
 }
 
-footer {
+.footer {
+    width: 100%;
     background-color: #0a1f6b;
     color: cornsilk;
     text-align: center;
@@ -243,11 +269,12 @@ footer {
     border-top: 5px solid maroon;
     display: flex;
     flex-flow: row no-wrap;
+        justify-content: space-between;
 }
 
-footer::after {
+/*footer::after {
     content: "All images copyrights www.nehaparikhdance.com";
-}
+}*/
 
 .textcenter {
     text-align: center;
@@ -272,12 +299,6 @@ tr:nth-child(even) {
 
 /* my grid system */
 
-.row {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 0 1 auto;
-}
-
 
 /*.row::after {
 	content:"";
@@ -286,13 +307,28 @@ tr:nth-child(even) {
 } */
 
 [class*='col-'] {
-    float: left;
+
     margin-left: 2%;
     min-height: 1px;
-    position: relative;
+ /*   position: relative;  */
 }
 
+.themain {
+    order: -1;
+}
 
+.imp {
+    order: -2;
+}
+.hd-col-1 {
+        flex: 0 0 16%;
+}
+.hd-col-2 {
+        flex: 0 0 32%;
+}
+.hd-col-3 {
+        flex: 0 0 50%;
+}
 /* mobile first approach - columns are all together 96% wide */
 
 .col-1,
@@ -302,7 +338,7 @@ tr:nth-child(even) {
 .col-5,
 .col-6,
 .col-2-6 {
-    width: 96%;
+    flex: 0 0 96%;
 }
 
 .hide-m {
@@ -312,27 +348,23 @@ tr:nth-child(even) {
 @media only screen and (min-width:480px) and (max-width: 767px) {
     /* tablet */
     /* columns 3 & above become full width */
-    .col-3,
-    .col-4,
-    .col-5,
-    .col-6,
-    .col-2-6 {
-        width: 96%;
+    /* columns 3 & above become full width */
+    .col-3, .col-4, .col-5, .col-6, .col-2-6 {
+        flex: 0 0 96%;
     }
-    .col-1,
-    .col-2 {
-        width: 47%;
+    .col-1, .col-2 {
+        flex: 0 0 47%;
     }
     .hide-m {
         display: block;
     }
-    .banner h1 {
-        font-size: 1.2em;
-        float: left;
+    .themain, .imp {
+        order: 1;
     }
     nav {
         font-size: 1em;
     }
+
     blockquote::after {
         content: "";
         background: url(../img/ghungroo_small.jpg);
@@ -340,52 +372,64 @@ tr:nth-child(even) {
 }
 
 @media only screen and (min-width:768px) and (max-width: 1013px) {
-    .banner h1 {
+    .header h1 {
         font-size: 1.5em;
-        float: left;
+
     }
 }
 
 
 /*anything bigger than a tablet is assumed to be desktop and above */
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:768px)
+{
+
     .col-1 {
         flex: 0 0 14.3%;
     }
-    .col-2,
-    .col-2-6 {
-        width: 30.6%;
+
+    .col-2, .col-2-6 {
+        flex: 0 0 30.6%;
     }
+
     .col-3 {
-        width: 47%;
+        flex: 0 0 47%;
     }
+
     .col-4 {
-        width: 63.2%;
+        flex: 0 0 63.2%;
     }
+
     .col-5 {
-        width: 81.5%;
+        flex: 0 0 81.5%;
     }
+
     .col-6 {
-        width: 96%;
+        flex: 0 0 96%;
     }
+
     .hide-m {
         display: block;
     }
+
+    .themain, .imp {
+        order: 1;
+    }
+
     nav {
         font-size: 1.2em;
     }
-    blockquote::after {
+
+        blockquote::after {
         content: "";
-        background: url(../img/ghungroo_big.jpg);
-        /* background image for desktop */
+        background: url(../img/ghungroo_big.jpg); /* background image for desktop */
     }
 }
 
 @media only screen and (min-width: 1014px) {
-    .banner h1 {
+    header h1 {
         font-size: 2em;
-        float: left;
+
     }
 }
 
