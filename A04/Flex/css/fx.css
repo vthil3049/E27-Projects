@@ -1,0 +1,68 @@
+.gall1 img{
+	width: 128px;
+	opacity: 0.5;
+	transition: width 2s, opacity 4s, border 2s ;
+}
+.gall1 img:hover {
+	width: 256px;
+	opacity: 1.0;
+	border: 2px solid maroon;
+	z-index: -2;
+}
+
+.gall1 figcaption {
+	display: inline-block;
+	position: relative;
+	/*left: -100px;
+	top: -10px; */
+	z-index: -1;
+	font-size: 1em;
+}
+
+.gall1 figcaption:hover {
+	
+		font-size: 2em;
+
+}
+.gall2 img{
+	transition: all 3s;
+}
+.gall2 img {
+	width: 128px;
+	opacity: 0.5;
+}
+
+.gall3 img {
+	width: 128px;
+	opacity: 0.5;
+	filter: sepia(100%);
+}
+.gall2 img:hover {
+	transform: scaleX(2) scaleY(2) rotate(360deg);
+	width: 256px;
+	opacity: 1.0;
+	border: 2px solid maroon;
+	z-index: -2;
+}
+
+.gall3 img:hover {
+	animation-name: disp;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	opacity: 0.5;
+	border: 2px solid maroon;
+}
+
+@keyframes disp {
+	0%, 100% {
+		transform: scaleX(0.5) scaleY(0.5);
+		filter: sepia(100%);
+		opacity: 0.5;
+	}
+	50% {
+		transform: scaleX(2) scaleY(2);
+		filter: sepia(0%);
+		opacity: 1.0;		
+	}
+}
