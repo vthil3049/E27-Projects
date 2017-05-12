@@ -87,6 +87,7 @@ header {
   /*  grid-template-columns: 30em 100em 20em; */
   grid-template-columns: 1fr 4fr 1fr;
       align-items: stretch;
+      padding-bottom: 1em;
 }
 
 header h1 {
@@ -154,6 +155,8 @@ header img {
     list-style-type: none;
     margin: 0 2em;
     text-align: center;
+    /* display: flex; */
+    align-self: center;
 }
 .navbar a {
     display: inline-block;
@@ -224,12 +227,13 @@ tr:nth-child(even) {
     min-height: 1px;
      position: relative;  
 }
-.main-container: {
+
+/*.main-container: {
     grid-row: 3;
     display: grid;
    grid-template-rows: 3fr; 
     grid-template-columns: 4f 2fr;
-}
+} 
 
 .imp {
     grid-row: 1;
@@ -237,6 +241,24 @@ tr:nth-child(even) {
 
 .themain {
     grid-row: 2;
+}
+
+
+*/
+.main-container: {
+    grid-row: 3;
+    display: flex;
+      flex-flow: column;
+      align-items: top;
+
+}
+
+.themain {
+    order: -1;
+}
+
+.imp {
+    order: -2;
 }
 
 
