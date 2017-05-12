@@ -1,3 +1,6 @@
+figcaption {
+	text-align: center;
+}
 .gall1 img{
 	width: 128px;
 	opacity: 0.5;
@@ -11,8 +14,8 @@
 }
 
 .gall1 figcaption {
-	display: inline-block;
-	position: relative;
+	/*display: inline-block; */
+	/*position: relative; */
 	/*left: -100px;
 	top: -10px; */
 	z-index: -1;
