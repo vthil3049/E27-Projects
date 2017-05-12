@@ -52,24 +52,21 @@ a {
 }
 
 .wrapper {
-     display: flex;
-     flex-direction: column;
-
+    display: flex;
+    flex-direction: column;
 }
+
 .inline-block {
     display: inline-block;
-    
 }
 
 .row {
-
     display: flex;
     flex-flow: row no-wrap;
     flex: 0 1 auto;
-
 }
+
 .social {
-    
     /*margin-right: 2em; */
 }
 
@@ -106,10 +103,12 @@ header img {
     border-radius: 100px;
     margin: 10px 0 10px 40px;
 }
+
 .main {
     display: flex;
     flex-flow: row wrap;
 }
+
 .themain {
     order: -1;
 }
@@ -117,6 +116,7 @@ header img {
 .imp {
     order: -2;
 }
+
 section,
 aside {
     overflow: auto;
@@ -165,7 +165,7 @@ aside h2 {
 
 header h1 {
     /*width: 30%; */
-   /* float: left; */
+    /* float: left; */
 }
 
 nav {
@@ -180,6 +180,7 @@ nav {
     justify-content: space-around;
     align-items: center;
 }
+
 
 /*nav ul {
     padding: 0;
@@ -196,20 +197,23 @@ nav li {
     padding-right: 0.5em;
 }
 */
+
 .navbar ul {
     display: flex;
     flex-flow: row no-wrap;
     justify-content: space-between;
-        /*align-items: left; */
-        align-content: center;
+    /*align-items: left; */
+    align-content: center;
 }
+
 .navbar ul li {
     display: inline-block;
-        list-style-type: none;
-        /*margin: auto; */
-        padding: 0 0.5em;
-        flex-basis: auto;
+    list-style-type: none;
+    /*margin: auto; */
+    padding: 0 0.5em;
+    flex-basis: auto;
 }
+
 nav a {
     display: inline-block;
     text-decoration: none;
@@ -219,11 +223,13 @@ nav a {
 
 nav a:hover {
     color: #ffc;
-    background-color: maroon;
+
+    border-top: 2px solid cornsilk;
 }
 
 .selected {
     border-top: 2px solid cornsilk;
+        background-color: maroon;
 }
 
 section {
@@ -269,8 +275,9 @@ blockquote cite {
     border-top: 5px solid maroon;
     display: flex;
     flex-flow: row no-wrap;
-        justify-content: space-between;
+    justify-content: space-between;
 }
+
 
 /*footer::after {
     content: "All images copyrights www.nehaparikhdance.com";
@@ -301,16 +308,15 @@ tr:nth-child(even) {
 
 
 /*.row::after {
-	content:"";
-	display: table;
-	clear: both;
+    content:"";
+    display: table;
+    clear: both;
 } */
 
 [class*='col-'] {
-
     margin-left: 2%;
     min-height: 1px;
- /*   position: relative;  */
+    /*   position: relative;  */
 }
 
 .themain {
@@ -320,15 +326,20 @@ tr:nth-child(even) {
 .imp {
     order: -2;
 }
+
 .hd-col-1 {
-        flex: 0 0 16%;
+    flex: 0 0 16%;
 }
+
 .hd-col-2 {
-        flex: 0 0 32%;
+    flex: 0 0 32%;
 }
+
 .hd-col-3 {
-        flex: 0 0 50%;
+    flex: 0 0 50%;
 }
+
+
 /* mobile first approach - columns are all together 96% wide */
 
 .col-1,
@@ -349,22 +360,27 @@ tr:nth-child(even) {
     /* tablet */
     /* columns 3 & above become full width */
     /* columns 3 & above become full width */
-    .col-3, .col-4, .col-5, .col-6, .col-2-6 {
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-2-6 {
         flex: 0 0 96%;
     }
-    .col-1, .col-2 {
+    .col-1,
+    .col-2 {
         flex: 0 0 47%;
     }
     .hide-m {
         display: block;
     }
-    .themain, .imp {
+    .themain,
+    .imp {
         order: 1;
     }
     nav {
         font-size: 1em;
     }
-
     blockquote::after {
         content: "";
         background: url(../img/ghungroo_small.jpg);
@@ -374,62 +390,52 @@ tr:nth-child(even) {
 @media only screen and (min-width:768px) and (max-width: 1013px) {
     .header h1 {
         font-size: 1.5em;
-
     }
 }
 
 
 /*anything bigger than a tablet is assumed to be desktop and above */
 
-@media only screen and (min-width:768px)
-{
-
+@media only screen and (min-width:768px) {
     .col-1 {
         flex: 0 0 14.3%;
     }
-
-    .col-2, .col-2-6 {
+    .col-2,
+    .col-2-6 {
         flex: 0 0 30.6%;
     }
-
     .col-3 {
         flex: 0 0 47%;
     }
-
     .col-4 {
         flex: 0 0 63.2%;
     }
-
     .col-5 {
         flex: 0 0 81.5%;
     }
-
     .col-6 {
         flex: 0 0 96%;
     }
-
     .hide-m {
         display: block;
     }
-
-    .themain, .imp {
+    .themain,
+    .imp {
         order: 1;
     }
-
     nav {
         font-size: 1.2em;
     }
-
-        blockquote::after {
+    blockquote::after {
         content: "";
-        background: url(../img/ghungroo_big.jpg); /* background image for desktop */
+        background: url(../img/ghungroo_big.jpg);
+        /* background image for desktop */
     }
 }
 
 @media only screen and (min-width: 1014px) {
     header h1 {
         font-size: 2em;
-
     }
 }
 
