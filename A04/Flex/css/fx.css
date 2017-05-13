@@ -77,8 +77,9 @@ figcaption {
 }
 
 #smile-frown {
-	width: 30%;
+	width: 50%;
 	padding: 10px;
+	margin: 10px auto;
 }
 
 
@@ -96,11 +97,11 @@ figcaption {
   }
 
   45%{
-    opacity: 1;
+    opacity: 0.6;
   }
 
   50% {
-    opacity: 0.2;
+    opacity: 0.0;
   }
 
   95% {
@@ -139,4 +140,32 @@ figcaption {
   100%{
     opacity: 0;
   }
+}
+
+/*---------------- biker --------------------------*/
+#bike-area {
+	width: 100px;
+}
+#biker {
+ 
+  animation: bike_ride 8s ease-in-out infinite reverse;
+ 
+}
+@keyframes bike_ride {
+    0%, 100%{
+        transform:translate(0, 0) rotate(0deg);
+    }
+
+    25%{
+        
+        transform:translate(200px, 0) rotate(-5deg);
+    }    
+    50%{
+        
+        transform:translate(100px, 0) rotate(0deg);
+    }   
+    /* translate X the entire width of the wave pattern (149px), return Y to start */
+    75%{
+         transform:translate(100px, 0) rotate(5deg);
+    }
 }
