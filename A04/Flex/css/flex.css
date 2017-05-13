@@ -320,11 +320,11 @@ tr:nth-child(even) {
 }
 
 .themain {
-    order: -1;
+    order: 1;
 }
 
 .imp {
-    order: -2;
+    order: 2;
 }
 
 .hd-col-1 {
@@ -360,7 +360,7 @@ tr:nth-child(even) {
     /* tablet */
     /* columns 3 & above become full width */
     /* columns 3 & above become full width */
-    .col-3,
+
     .col-4,
     .col-5,
     .col-6,
@@ -368,7 +368,8 @@ tr:nth-child(even) {
         flex: 0 0 96%;
     }
     .col-1,
-    .col-2 {
+    .col-2,
+        .col-3 {
         flex: 0 0 47%;
     }
     .hide-m {
@@ -419,9 +420,11 @@ tr:nth-child(even) {
     .hide-m {
         display: block;
     }
-    .themain,
-    .imp {
+    .themain {
         order: 1;
+    }
+    .imp {
+        order: 2;
     }
     nav {
         font-size: 1.2em;
@@ -457,4 +460,9 @@ tr:nth-child(even) {
     width: 100%;
     height: 100%;
     border: 1px solid silver;
+}
+
+#history {
+    display: flex;
+    flex-direction: column wrap;
 }

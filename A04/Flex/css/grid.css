@@ -191,8 +191,16 @@ header img {
     grid-column: 2/3;
    
 } */
-
+footer {
+            width: 100%;
+    background-color: #0a1f6b;
+    color: cornsilk;
+    text-align: center;
+    padding: 1em 5em;
+    border-top: 5px solid maroon;
+}
 .footer: {
+
     grid-row: 4;
     display: grid;
     grid-template-rows: min-content;
@@ -381,4 +389,9 @@ tr:nth-child(even) {
         font-size: 2em;
 
     }
+}
+
+#history {
+    display: flex;
+    flex-flow: row nowrap;
 }

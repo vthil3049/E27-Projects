@@ -4,7 +4,7 @@ figcaption {
 .gall1 img{
 	width: 128px;
 	opacity: 0.5;
-	transition: width 2s, opacity 4s, border 2s ;
+	transition: width 2s, opacity 4s, border 2s ; /* transition */
 }
 .gall1 img:hover {
 	width: 256px;
@@ -28,7 +28,7 @@ figcaption {
 
 }
 .gall2 img{
-	transition: all 3s;
+	transition: all 3s;   /* transition */
 }
 .gall2 img {
 	width: 128px;
@@ -38,17 +38,17 @@ figcaption {
 .gall3 img {
 	width: 128px;
 	opacity: 0.5;
-	filter: sepia(100%);
+	filter: sepia(100%);   /* filter */
 }
 .gall2 img:hover {
-	transform: scaleX(2) scaleY(2) rotate(360deg);
+	transform: scaleX(2) scaleY(2) rotate(360deg);  /* transform */
 	width: 256px;
 	opacity: 1.0;
 	border: 2px solid maroon;
 	z-index: -2;
 }
 
-.gall3 img:hover {
+.gall3 img:hover { 
 	animation-name: disp;
 	animation-duration: 3s;
 	animation-timing-function: ease-in-out;
@@ -57,7 +57,7 @@ figcaption {
 	border: 2px solid maroon;
 }
 
-@keyframes disp {
+@keyframes disp {    /*key frame animation */
 	0%, 100% {
 		transform: scaleX(0.5) scaleY(0.5);
 		filter: sepia(100%);
@@ -68,4 +68,75 @@ figcaption {
 		filter: sepia(0%);
 		opacity: 1.0;		
 	}
+}
+
+
+/* animation for the svgs */
+#svgarea {
+	background-color: cornsilk;
+}
+
+#smile-frown {
+	width: 30%;
+	padding: 10px;
+}
+
+
+
+#smile {
+  opacity: 1.0;
+
+  animation: smile 8s ease-in-out infinite;
+
+}
+
+@keyframes smile {
+  0%{
+    opacity: 1;
+  }
+
+  45%{
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  95% {
+  opacity: 0.2;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+
+#frown {
+  opacity: 0.0;
+  animation: frown 8s ease-in-out infinite;
+ 
+}
+
+@keyframes frown {
+  0%{
+    opacity: 0;
+  }
+
+  45%{
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1.0;
+  }
+
+  95% {
+  opacity: 0.5;
+  }
+
+  100%{
+    opacity: 0;
+  }
 }
