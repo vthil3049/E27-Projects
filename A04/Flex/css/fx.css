@@ -146,6 +146,10 @@ figcaption {
 #bike-area {
 	width: 100px;
 }
+.cycle, .light {
+	display: inline-block;
+	width: 100px;
+}
 #biker {
  
   animation: bike_ride 8s ease-in-out infinite reverse;
